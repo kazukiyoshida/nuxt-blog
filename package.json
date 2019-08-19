@@ -1,0 +1,45 @@
+{
+  "name": "groomingWebBff",
+  "version": "1.0.0",
+  "description": "grooming web bff",
+  "author": "Kazuki Yoshida",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "dev": "cross-env NODE_ENV=development nodemon src/server/index.ts --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node src/server/index.ts",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.1",
+    "@nuxt/typescript": "^2.8.1",
+    "@types/lodash": "^4.14.137",
+    "axios": "^0.19.0",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "^2.4.1",
+    "cross-env": "^5.2.0",
+    "express": "^4.17.1",
+    "grpc": "^1.22.2",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.12.0",
+    "nuxt": "^2.8.1",
+    "nuxt-property-decorator": "^2.3.0",
+    "pino": "^5.13.1",
+    "processmd": "^4.4.2",
+    "pug": "2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3",
+    "vue-property-decorator": "^8.2.1"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "vue-jest": "^3.0.4"
+  }
+}
