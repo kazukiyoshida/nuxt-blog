@@ -1,0 +1,25 @@
+// clear fix
+@mixin clearfix {
+  zoom: 1;
+
+  &::before, &::after {
+    display: table;
+    content: '';
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// ブレークポイント
+@mixin sp{
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin pc {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
