@@ -1,33 +1,24 @@
 <template lang="pug">
 .app
-  .hero
-    header.header
-      transition(appear, name="title")
-        .header__title
+  .wrapAll
+    template(v-if="false")
+      .header
+        p header
+    .wrapMiddle
+      .wrapSide
+        .side-title
           n-link(to="/")
-            p.first
-              | Kazuki
-            p.last
-              | Yoshida
-      transition(appear, name="menu")
-        p.header__description
-          | @Tokyo, Japan. <br />
-          | I work as a Backend web developer, and I'm learning Frontend and Embedded system.
-      transition(appear, name="menu")
-        nav.menu
-          ul.menu-container
-            .menu-button
-              n-link(class="menu-button__link" to="/about")
-                span
-                  | about
-            .menu-button
-              n-link(class="menu-button__link" to="/blog")
-                span
-                  | blog
-    nuxt
-    footer.footer
-      .footer__copyright
-        | © 2018 KazukiYoshida
+            p Kazuki
+            p Yoshida
+        .side-desc
+          p @Tokyo, Japan.
+          p I work as a Serverside web developer, and I'm learning Frontend and Embedded system.
+        .side-buttons
+          n-link(to="/about").button about
+          n-link(to="/blog").button blog
+      .wrapContent
+        nuxt
+    .footer © 2019 KazukiYoshida
 </template>
 
 <style lang="scss">
@@ -72,104 +63,75 @@ body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 
-.hero {
-  padding: $padding-size;
+.wrapAll {
+  position: relative;
+  height: 100vh;
 }
 
 .header {
-  width: 25%;
-  position: fixed;
-  bottom: 12%;
-  left: 6.5%;
+  height: 30px;
+  width: 100%;
+  background-color: yellow;
+}
 
+.wrapMiddle {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.wrapSide {
+  position: absolute;
+  bottom: 50px;
+  width: 35%;
+  padding: 0 40px 0 40px;
+}
+
+.side-title {
   color: white;
-  text-decoration: none;
-
-  @include sp {
-  width: 88%;
-  position: fixed;
-  top: 3%;
-  left: 6.5%;
-  }
-
-  > .header__title {
-    font-weight: bold;
-
-    @include sp {
-      font-size: 32px;
-      line-height: 32px;
-    }
-    @include pc {
-      font-size: 50px;
-      line-height: 50px;
-    }
-  }
-
-  > .header__description {
-    @include sp {
-      display: none;
-    }
-
-    font-size: 14px;
-    line-height: 24px;
-  }
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 100px;
+  display: inline-block;
+  padding: 0 0 20px 0;
 }
 
-.menu {
-  position: fixed;
-  @include sp {
-    bottom: 8%;
-    width: 90%;
-  }
-  @include pc {
-    bottom: 6%;
-    width: 23%;
-  }
-
-  > .menu-container {
-    display:flex;
-    justify-content: space-around;
-
-    @include sp {
-      font-size: 14px;
-    }
-    @include pc {
-      font-size: 14px;
-    }
-  }
+.side-desc {
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  display: inline-block;
 }
 
-.menu-button__link {
+.button {
+  font-size: 18px;
   display: block;
-  width: 90px;
+  width: 40%;
   padding: 8px;
+  margin: 20px 20px 20px 20px;
   text-align: center;
-  text-decoration: none;
   color: white;
   border: 2px solid white;
   border-radius: 5px;
-  transition: .4s;
-
-  &:hover {
-    background: white;
-    color: #000;
-  }
+  float: left;
 }
 
-footer.footer {
-  position: fixed;
-  bottom: $padding-size;
-  height: 1%;
-  width: calc(100% - 40px);
+.wrapContent {
+  width: 65%;
+  height: 100vh;
+  float: right;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 50px;
   color: white;
   text-align: center;
   text-shadow: 0px 0px 1em black, 0px 0px 1em black;
-  @include sp {
-    font-size: 6px;
-  }
-  @include pc {
-    font-size: 4px;
-  }
+  font-size: 4px;
 }
 
 a:visited, a {
@@ -178,31 +140,6 @@ a:visited, a {
   &:hover {
     text-decoration: underline;
   }
-}
-
-
-/*************************************/
-/*            transition             */
-/*************************************/
-.title-enter-active, .title-leave-active {
-    transition: opacity 1s;
-}
-.title-enter, .title-leave-to {
-    opacity: 0;
-}
-
-.desc-enter-active, .desc-leave-active {
-    transition: opacity 3s;
-}
-.desc-enter, .desc-leave-to {
-    opacity: 0;
-}
-
-.menu-enter-active, .menu-leave-active {
-    transition: opacity 3s;
-}
-.menu-enter, .menu-leave-to {
-    opacity: 0;
 }
 
 </style>
