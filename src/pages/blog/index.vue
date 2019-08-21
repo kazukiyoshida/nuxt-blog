@@ -2,17 +2,17 @@
 .component
   template(v-for="post in posts")
     .wrapBlog
-      n-link(:to="'/blog/'+post.id").blog
+      n-link(:to="$C.PAGE.BLOG+post.id").blog
         p.title {{ post.title }}
         p.createdAt {{ Date.parse(post.createdAt) }}
       .wrapTags
         template(v-for="tag in post.tags")
-          n-link(to="/").tag {{ tag }}
+          n-link(:to="$C.PAGE.TOP").tag {{ tag }}
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { IPostSummary } from '../interfaces/posts'
+import { IPostSummary } from '@/interfaces/posts'
 
 @Component
 export default class BlogList extends Vue {

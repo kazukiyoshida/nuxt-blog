@@ -7,15 +7,15 @@
     .wrapMiddle
       .wrapSide
         .side-title
-          n-link(to="/")
+          n-link(:to="$C.PAGE.TOP")
             p Kazuki
             p Yoshida
         .side-desc
           p @Tokyo, Japan.
           p I work as a Serverside web developer, and I'm learning Frontend and Embedded system.
         .side-buttons
-          n-link(to="/about").button about
-          n-link(to="/blog").button blog
+          n-link(:to="$C.PAGE.ABOUT").button about
+          n-link(:to="$C.PAGE.BLOGS").button blog
       .wrapContent
         nuxt
     .footer.footer-black © 2019 KazukiYoshida
