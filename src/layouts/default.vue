@@ -18,7 +18,7 @@
           n-link(to="/blog").button blog
       .wrapContent
         nuxt
-    .footer © 2019 KazukiYoshida
+    .footer.footer-black © 2019 KazukiYoshida
 </template>
 
 <style lang="scss">
@@ -90,25 +90,24 @@ body {
 .side-title {
   color: white;
   font-weight: bold;
-  font-size: 100px;
-  line-height: 100px;
+  font-size: 60px;
+  line-height: 60px;
   display: inline-block;
-  padding: 0 0 20px 0;
 }
 
 .side-desc {
   color: white;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 20px;
   display: inline-block;
 }
 
 .button {
-  font-size: 18px;
+  font-size: 14px;
   display: block;
   width: 40%;
   padding: 8px;
-  margin: 20px 20px 20px 20px;
+  margin: 10px 20px 10px 20px;
   text-align: center;
   color: white;
   border: 2px solid white;
@@ -122,17 +121,26 @@ body {
   float: right;
 }
 
-.footer {
+.footer{
   position: absolute;
   bottom: 0;
 
   width: 100%;
   height: 50px;
-  color: white;
   text-align: center;
-  text-shadow: 0px 0px 1em black, 0px 0px 1em black;
   font-size: 4px;
+
 }
+
+.footer-black {
+  color: black;
+}
+
+.footer-white {
+  color: white;
+  text-shadow: 0px 0px 1em black, 0px 0px 1em black;
+}
+
 
 a:visited, a {
   color: white;
