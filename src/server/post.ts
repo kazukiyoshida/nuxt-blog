@@ -1,5 +1,5 @@
 import { IPost } from '../interfaces/post'
-const { fileMap } = require('../articles/sammary')
+const { fileMap } = require('../articles/summary')
 
 const _ = require('lodash')
 const Express = require('express')

@@ -1,14 +1,14 @@
-import { IPostSammary } from '../interfaces/posts'
+import { IPostSummary } from '../interfaces/posts'
 const Express = require('express')
 const router = Express.Router()
-const { fileMap } = require('../articles/sammary')
+const { fileMap } = require('../articles/summary')
 const _ = require('lodash')
 
 router.get('/posts', (req, res, next) => {
   res.header('Content-Type', 'application/json; charset=utf-8')
 
-  const sammary = _.reduce(fileMap, (accm: IPostSammary[], file: any): IPostSammary[] => {
-    const ps: IPostSammary = {
+  const summary = _.reduce(fileMap, (accm: IPostSummary[], file: any): IPostSummary[] => {
+    const ps: IPostSummary = {
       id: file.id,
       title: file.title,
       createdAt: file.created_at,
@@ -20,7 +20,7 @@ router.get('/posts', (req, res, next) => {
     return accm
   }, [])
 
-  res.send({ posts: sammary })
+  res.send({ posts: summary })
 })
 
 module.exports = router

@@ -1,12 +1,10 @@
 import Vue from 'vue'
 import axios from 'axios'
 import { API } from '../constants/api'
-import {
-IPostSammary
-} from '../interfaces/posts'
+import { IPostSummary } from '../interfaces/posts'
 
 export interface IState {
-  posts: IPostSammary[] | null
+  posts: IPostSummary[] | null
 }
 
 export const state = (): IState => ({
@@ -14,13 +12,13 @@ export const state = (): IState => ({
 })
 
 export const getters = {
-  getPosts(state: IState): IPostSammary[] | null {
+  getPosts(state: IState): IPostSummary[] | null {
     return state.posts
   }
 }
 
 export const mutations = {
-  savePosts(state: IState, posts: IPostSammary[]): void {
+  savePosts(state: IState, posts: IPostSummary[]): void {
     state.posts = posts
   }
 }

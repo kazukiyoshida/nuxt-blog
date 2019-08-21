@@ -2,10 +2,10 @@
  * 投稿一覧
  */
 export interface IPosts {
-  posts: IPostSammary[]
+  posts: IPostSummary[]
 }
 
-export interface IPostSammary {
+export interface IPostSummary {
   id: number
   title: string
   createdAt: string
