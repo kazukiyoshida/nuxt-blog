@@ -12,5 +12,5 @@ $ yarn install
 $ yarn dev
 
 # markdwon を json へ変換
-processmd "src/markdown/*.md" --outputDir src/article --stdout > src/article/summary.json
+processmd "src/markdown/*.md" --outputDir src/articles --stdout > src/article/summary.json
 ```

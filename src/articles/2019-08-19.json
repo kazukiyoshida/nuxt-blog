@@ -8,7 +8,7 @@
   "top_image": "/icons/mac-apple.svg",
   "bodyContent": "WindowsからMacに移って、よく使っているショートカットキーの違いに戸惑いました。\nMacではChromeのデベロッパーツールを開くショートカットキーは`⌘`+`option`+`i`です。\n忘れてしまうので、Macでも`F12`で開けるように設定します。\n\n## デフォルトのショートカットキー\n\nMacではChromeのデベロッパーツールを開くデフォルトのショートカットキーは`⌘`+`option`+`i`です。\nその他、Chromeの操作の中でよく使うものを抜粋しました。",
   "bodyHtml": "<p>WindowsからMacに移って、よく使っているショートカットキーの違いに戸惑いました。\nMacではChromeのデベロッパーツールを開くショートカットキーは<code>⌘</code>+<code>option</code>+<code>i</code>です。\n忘れてしまうので、Macでも<code>F12</code>で開けるように設定します。</p>\n<h2>デフォルトのショートカットキー</h2>\n<p>MacではChromeのデベロッパーツールを開くデフォルトのショートカットキーは<code>⌘</code>+<code>option</code>+<code>i</code>です。\nその他、Chromeの操作の中でよく使うものを抜粋しました。</p>\n",
-  "dir": "src/article",
+  "dir": "src/articles",
   "base": "2019-08-19.json",
   "ext": ".json",
   "sourceBase": "2019-08-19.md",
