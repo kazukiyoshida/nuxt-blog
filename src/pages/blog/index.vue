@@ -13,6 +13,7 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import { IPostSummary } from '@/interfaces/posts'
+import { COLOR } from '@/constants/app'
 
 @Component
 export default class BlogList extends Vue {
@@ -23,6 +24,7 @@ export default class BlogList extends Vue {
 
   /** ライフサイクル */
   public async fetch({ store }) {
+    store.commit('i18n/setBackgroundColor', COLOR.WHITE)
     console.log(">>> blog list fetch")
     await store.dispatch('post/fetchPosts')
   }

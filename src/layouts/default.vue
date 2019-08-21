@@ -27,7 +27,9 @@
           ) {{ $t('top.changeLang') }}
       .wrapContent
         nuxt
-    .footer.footer-black © 2019 KazukiYoshida
+    .footer(
+      :class="this.backgroundColor === $C.COLOR.BLACK ? 'footer-white' : 'footer-black'"
+    ) © 2019 KazukiYoshida
 </template>
 
 <script lang="ts">
@@ -35,6 +37,11 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class extends Vue {
+
+  /** 現在のメイン背景色 */
+  public get backgroundColor(): string {
+    return this.$store.getters['i18n/getBackgroundColor']
+  }
 
   /** 現在の言語 */
   public get lang(): string {
