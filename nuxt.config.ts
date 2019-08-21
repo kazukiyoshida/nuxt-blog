@@ -30,7 +30,8 @@ const config: NuxtConfiguration = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/constants-inject.ts'
+    '@/plugins/constants-inject.ts',
+    '@/plugins/i18n.ts'
   ],
   /*
   ** Nuxt.js modules

@@ -33,6 +33,7 @@
     "sass-loader": "^7.1.0",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
+    "vue-i18n": "^8.14.0",
     "vue-property-decorator": "^8.2.1"
   },
   "devDependencies": {

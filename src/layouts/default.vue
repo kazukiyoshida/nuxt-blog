@@ -11,15 +11,45 @@
             p Kazuki
             p Yoshida
         .side-desc
-          p @Tokyo, Japan.
-          p I work as a Serverside web developer, and I'm learning Frontend and Embedded system.
+          p {{ $t('top.description1') }}
+          p {{ $t('top.description2') }}
         .side-buttons
-          n-link(:to="$C.PAGE.ABOUT").button about
-          n-link(:to="$C.PAGE.BLOGS").button blog
+          n-link(:to="$C.PAGE.ABOUT").button {{ $t('top.about') }}
+          n-link(:to="$C.PAGE.BLOGS").button {{ $t('top.blog') }}
+        .side-lang
+          .lang(
+            v-if="lang === $C.LANG.JA"
+            @click="changeLang($C.LANG.EN)"
+          ) {{ $t('top.changeLang') }}
+          .lang(
+            v-if="lang === $C.LANG.EN"
+            @click="changeLang($C.LANG.JA)"
+          ) {{ $t('top.changeLang') }}
       .wrapContent
         nuxt
     .footer.footer-black © 2019 KazukiYoshida
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class extends Vue {
+
+  /** 現在の言語 */
+  public get lang(): string {
+    return this.$store.getters['i18n/getLang']
+  }
+
+  /** 言語を変更 */
+  public changeLang(lang: string): void {
+    this.$store.commit('i18n/setLang', lang)
+    // https://github.com/kazupon/vue-i18n/issues/375
+    this.$root.$i18n.locale = lang
+  }
+
+}
+</script>
 
 <style lang="scss">
 html {
@@ -113,6 +143,11 @@ body {
   border: 2px solid white;
   border-radius: 5px;
   float: left;
+}
+
+.side-lang {
+  color: white;
+  font-size: 14px;
 }
 
 .wrapContent {
