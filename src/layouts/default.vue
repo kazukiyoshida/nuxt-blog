@@ -80,7 +80,7 @@ html {
 
 @import '../assets/stylesheet/mixins';
 $padding-size: 20px;
-$hero-image: "../assets/images/bari.jpg";
+$hero-image: "../assets/images/tim-marshall-5rvl16but5A-unsplash.jpg";
 
 * {
   margin: 0;
