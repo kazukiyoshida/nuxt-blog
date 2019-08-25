@@ -5,5 +5,25 @@
     "about": "about",
     "blog": "blog",
     "changeLang": "...日本語に変更"
+  },
+  "about": {
+    "description1": "Hi there! Welcome and thank you for visiting my website!",
+    "description2": "I'm Kazuki, a web developer based in Tokyo, Japan.",
+    "description3": "",
+    "embedded": "Embedded systems programming",
+    "beer": "Beer, Sake",
+    "training": "Work out",
+    "physics": "Physics",
+    "books": "Reeding books",
+    "nosleep": "Work all night..",
+    "history1": "・1992, Born in Tochigi Prefecture",
+    "history2": "・Tokyo Gakugei University Senior High School",
+    "history3": "・Kyoto University, Graduate School of Science, Department of Physics",
+    "lab1": "・Kyoto University, Graduate School of Science, Division of Physics and Astronomy",
+    "lab2": "：Machine Learning, Statistical Analysis",
+    "officeA1": "・Industrial Growth Platform, Inc（ IGPI ）",
+    "officeA2": "：Business Consultant & Data analyst",
+    "officeB1": "・TeamLab",
+    "officeB2": "：Web Developer"
   }
 }

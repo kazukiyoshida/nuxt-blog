@@ -5,5 +5,25 @@
     "about": "自己紹介",
     "blog": "ブログ",
     "changeLang": "...change to English"
+  },
+  "about": {
+    "description1": "こんにちは！ブログ見てくれてありがとうございます！",
+    "description2": "東京でWebエンジニアをしています吉田和輝です。",
+    "description3": "好きな仕事をしてジムに通って、趣味でもプログラミングして、のびのび生きてます。",
+    "embedded": "組み込みプログラミング",
+    "beer": "お酒",
+    "training": "筋トレ",
+    "physics": "物理学",
+    "books": "読書",
+    "nosleep": "徹夜",
+    "history1": "・1992年 栃木県生まれ",
+    "history2": "・東京学芸大学附属高校",
+    "history3": "・京都大学 理学部 物理学科",
+    "lab1": "・京都大学大学院 理学研究科",
+    "lab2": "：機械学習と統計解析",
+    "officeA1": "・経営共創基盤（ IGPI ）",
+    "officeA2": "：経営コンサルタント 兼 データアナリスト",
+    "officeB1": "・チームラボ",
+    "officeB2": "：Webエンジニア"
   }
 }
