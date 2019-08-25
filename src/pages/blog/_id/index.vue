@@ -36,10 +36,48 @@ export default class Blog extends Vue {
 </script>
 
 <style lang="scss" scoped>
+
 .component {
   height: 100vh;
   background-color: white;
   padding: 30px;
+}
+
+.h2 {
+  color: red;
+}
+
+.title {
+  font-size: 20px;
+  font: bold;
+  padding: 20px 0 0 0;
+}
+
+.createdAt {
+  font-size: 14px;
+  color: gray;
+}
+
+.wrapTags {
+  padding: 40px 0 40px 0;
+}
+
+/** WIP: 共通化する */
+.tag {
+  font-size: 12px;
+  font: bold;
+  color: black;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #EEEEEE;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  padding: 2px 6px 2px 6px;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .post {
