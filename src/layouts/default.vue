@@ -10,6 +10,13 @@
           n-link(:to="$C.PAGE.TOP")
             p Kazuki
             p Yoshida
+        .side-sns(v-if="showSnsFlg")
+          a(:href="$C.LINK.TWITTER" target="_blank").sns
+            fa-icon(:icon="['fab', 'twitter']")
+          a(:href="$C.LINK.GITHUB" target="_blank").sns
+            fa-icon(:icon="['fab', 'github']")
+          a(:href="$C.LINK.INSTAGRAM" target="_blank").sns
+            fa-icon(:icon="['fab', 'instagram']")
         .side-desc
           p {{ $t('top.description1') }}
           p {{ $t('top.description2') }}
@@ -48,6 +55,9 @@ export default class extends Vue {
     return this.$store.getters['i18n/getLang']
   }
 
+  // fontawesome が一瞬巨大に表示される問題に対応
+  public showSnsFlg: boolean = false
+
   /** 言語を変更 */
   public changeLang(lang: string): void {
     this.$store.commit('i18n/setLang', lang)
@@ -55,6 +65,10 @@ export default class extends Vue {
     this.$root.$i18n.locale = lang
   }
 
+  /** ライフサイクル */
+  public async mounted() {
+    this.showSnsFlg = true
+  }
 }
 </script>
 

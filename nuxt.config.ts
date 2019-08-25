@@ -31,7 +31,8 @@ const config: NuxtConfiguration = {
   */
   plugins: [
     '@/plugins/constants-inject.ts',
-    '@/plugins/i18n.ts'
+    '@/plugins/i18n.ts',
+    '@/plugins/font-awesome'
   ],
   /*
   ** Nuxt.js modules
