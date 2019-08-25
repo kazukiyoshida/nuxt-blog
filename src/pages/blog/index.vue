@@ -4,13 +4,14 @@
     .wrapBlog
       n-link(:to="$C.PAGE.BLOG+post.id").blog
         p.title {{ post.title }}
-        p.createdAt {{ Date.parse(post.createdAt) }}
+        p.createdAt {{ date(post.createdAt) }}
       .wrapTags
         template(v-for="tag in post.tags")
           n-link(:to="$C.PAGE.TOP").tag {{ tag }}
 </template>
 
 <script lang="ts">
+import moment from 'moment';
 import { Component, Vue } from 'nuxt-property-decorator'
 import { IPostSummary } from '@/interfaces/posts'
 import { COLOR } from '@/constants/app'
@@ -20,6 +21,10 @@ export default class BlogList extends Vue {
   /** Store データの Getter */
   public get posts(): IPostSummary[] | null {
     return this.$store.getters['post/getPosts']
+  }
+
+  public date(t: string): string {
+    return moment(Date.parse(t)).format('YYYY/MM/DD')
   }
 
   /** ライフサイクル */

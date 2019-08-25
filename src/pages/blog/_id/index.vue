@@ -1,7 +1,7 @@
 <template lang="pug">
 .component
   p.title {{ post.title }}
-  p.createdAt {{ post.createdAt }}
+  p.createdAt {{ date(post.createdAt) }}
   .wrapTags
     template(v-for="tag in post.tags")
       p {{ tag }}
@@ -9,6 +9,7 @@
 </template>
 
 <script lang="ts">
+import moment from 'moment';
 import { Component, Vue } from 'nuxt-property-decorator'
 import { IPost } from '../interfaces/post'
 import { COLOR } from '@/constants/app'
@@ -18,6 +19,10 @@ export default class Blog extends Vue {
   /** Store データの Getter */
   public get post(): IPost | null {
     return this.$store.getters['post/getPost'](Number(this.$route.params.id))
+  }
+
+  public date(t: string): string {
+    return moment(Date.parse(t)).format('YYYY/MM/DD')
   }
 
   /** ライフサイクル */
