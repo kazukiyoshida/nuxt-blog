@@ -4,8 +4,9 @@
   p.createdAt {{ date(post.createdAt) }}
   .wrapTags
     template(v-for="tag in post.tags")
-      p {{ tag }}
-  #contentBlock
+      a(href="#").tag {{ tag }}
+  //- https://qiita.com/tscp/items/50b91ec583ae80aebac0
+  .post(v-html="this.post.bodyHtml")
 </template>
 
 <script lang="ts">
@@ -31,11 +32,6 @@ export default class Blog extends Vue {
     console.log(">>> blog fetch")
     await store.dispatch('post/fetchPost', Number(route.params.id))
   }
-
-  public mounted(): void {
-    const contentBlock = document.getElementById('contentBlock');
-    contentBlock.insertAdjacentHTML('afterbegin', this.post.bodyHtml);
-  }
 }
 </script>
 
@@ -44,5 +40,9 @@ export default class Blog extends Vue {
   height: 100vh;
   background-color: white;
   padding: 30px;
+}
+
+.post {
+  @import '../../../assets/stylesheet/github';
 }
 </style>
