@@ -7,7 +7,8 @@
         p.createdAt {{ date(post.createdAt) }}
       .wrapTags
         template(v-for="tag in post.tags")
-          n-link(:to="$C.PAGE.TOP").tag {{ tag }}
+          //- WIP: タグ検索機能は未実装
+          a(href="#").tag {{ tag }}
 </template>
 
 <script lang="ts">
@@ -70,11 +71,11 @@ export default class BlogList extends Vue {
 .tag {
   font-size: 12px;
   font: bold;
-  color: white;
+  color: black;
   display: block;
   text-align: center;
   border-radius: 5px;
-  background-color: gray;
+  background-color: #EEEEEE;
   display: inline-block;
   margin: 0 5px 0 0;
   padding: 2px 6px 2px 6px;

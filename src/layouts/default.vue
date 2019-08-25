@@ -18,7 +18,8 @@
           a(:href="$C.LINK.INSTAGRAM" target="_blank").sns
             fa-icon(:icon="['fab', 'instagram']")
         .side-desc
-          p {{ $t('top.description1') }}
+          a(href="$C.LINK.GOOGLEMAPS" target="_blank")
+            p {{ $t('top.description1') }}
           p {{ $t('top.description2') }}
         .side-buttons
           n-link(:to="$C.PAGE.ABOUT").button {{ $t('top.about') }}
@@ -135,22 +136,37 @@ body {
   position: absolute;
   bottom: 50px;
   width: 35%;
-  padding: 0 40px 0 40px;
+  padding: 0 60px 0 60px;
 }
 
 .side-title {
   color: white;
   font-weight: bold;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 70px;
+  line-height: 70px;
   display: inline-block;
 }
 
 .side-desc {
   color: white;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
   display: inline-block;
+}
+
+.side-sns {
+  color: 'white';
+  font-size: 40px;
+}
+
+.sns {
+  padding: 0 10px 0 0;
+}
+
+.side-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .button {
@@ -163,7 +179,6 @@ body {
   color: white;
   border: 2px solid white;
   border-radius: 5px;
-  float: left;
 }
 
 .side-lang {
