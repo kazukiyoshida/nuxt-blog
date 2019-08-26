@@ -33,9 +33,10 @@
           ) {{ $t('top.changeLang') }}
       .wrapContent
         nuxt
-    .footer(
-      :class="this.backgroundColor === $C.COLOR.BLACK ? 'footer-white' : 'footer-black'"
-    ) © 2019 KazukiYoshida
+    .wrapFooter(:class="(topPageFlg) ? '' : 'hideShow'")
+      .footer(
+        :class="this.backgroundColor === $C.COLOR.BLACK ? 'footer-white' : 'footer-black'"
+      ) © 2019 KazukiYoshida
 </template>
 
 <script lang="ts">
