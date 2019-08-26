@@ -1,12 +1,14 @@
 <template lang="pug">
 .component
-  p.title {{ post.title }}
-  p.createdAt {{ date(post.createdAt) }}
-  .wrapTags
-    template(v-for="tag in post.tags")
-      a(href="#").tag {{ tag }}
-  //- https://qiita.com/tscp/items/50b91ec583ae80aebac0
-  .post(v-html="this.post.bodyHtml")
+  BlogSpHeader().showHide
+  .wrapBlog
+    p.title {{ post.title }}
+    p.createdAt {{ date(post.createdAt) }}
+    .wrapTags
+      template(v-for="tag in post.tags")
+        BlogTag(:tagName="tag").tag
+    //- https://qiita.com/tscp/items/50b91ec583ae80aebac0
+    .post(v-html="this.post.bodyHtml")
 </template>
 
 <script lang="ts">
@@ -14,10 +16,12 @@ import moment from 'moment';
 import { Component, Vue } from 'nuxt-property-decorator'
 import { IPost } from '../interfaces/post'
 import { COLOR } from '@/constants/app'
+import BlogSpHeader from '@/components/blogSpHeader.vue'
 import BlogTag from '@/components/blogTag.vue'
 
 @Component({
   components: {
+    BlogSpHeader,
     BlogTag
   }
 })
