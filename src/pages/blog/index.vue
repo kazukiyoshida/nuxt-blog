@@ -7,8 +7,7 @@
         p.createdAt {{ date(post.createdAt) }}
       .wrapTags
         template(v-for="tag in post.tags")
-          //- WIP: タグ検索機能は未実装
-          a(href="#").tag {{ tag }}
+          BlogTag(:tagName="tag").tag
 </template>
 
 <script lang="ts">
@@ -16,8 +15,13 @@ import moment from 'moment';
 import { Component, Vue } from 'nuxt-property-decorator'
 import { IPostSummary } from '@/interfaces/posts'
 import { COLOR } from '@/constants/app'
+import BlogTag from '@/components/blogTag.vue'
 
-@Component
+@Component({
+  components: {
+    BlogTag
+  }
+})
 export default class BlogList extends Vue {
   /** Store データの Getter */
   public get posts(): IPostSummary[] | null {
@@ -69,16 +73,8 @@ export default class BlogList extends Vue {
 }
 
 .tag {
-  font-size: 12px;
-  font: bold;
-  color: black;
-  display: block;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #EEEEEE;
   display: inline-block;
-  margin: 0 5px 0 0;
-  padding: 2px 6px 2px 6px;
+}
 
   &:hover {
     text-decoration: none;

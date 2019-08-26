@@ -14,8 +14,13 @@ import moment from 'moment';
 import { Component, Vue } from 'nuxt-property-decorator'
 import { IPost } from '../interfaces/post'
 import { COLOR } from '@/constants/app'
+import BlogTag from '@/components/blogTag.vue'
 
-@Component
+@Component({
+  components: {
+    BlogTag
+  }
+})
 export default class Blog extends Vue {
   /** Store データの Getter */
   public get post(): IPost | null {
@@ -62,22 +67,7 @@ export default class Blog extends Vue {
   padding: 40px 0 40px 0;
 }
 
-/** WIP: 共通化する */
 .tag {
-  font-size: 12px;
-  font: bold;
-  color: black;
-  display: block;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #EEEEEE;
-  display: inline-block;
-  margin: 0 5px 0 0;
-  padding: 2px 6px 2px 6px;
-
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 .post {
