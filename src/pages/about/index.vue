@@ -3,6 +3,14 @@
   .topImages
     img(src="../../assets/images/sheep.png").topImage
     img(src="../../assets/images/hitachikaeri.jpeg").topImage
+  .showHide
+    .wrapSns
+      a(:href="$C.LINK.TWITTER" target="_blank").sns
+        fa-icon(:icon="['fab', 'twitter']")
+      a(:href="$C.LINK.GITHUB" target="_blank").sns
+        fa-icon(:icon="['fab', 'github']")
+      a(:href="$C.LINK.INSTAGRAM" target="_blank").sns
+        fa-icon(:icon="['fab', 'instagram']")
   .wrapContents
     .description
       | {{ $t('about.description1') }}<br />
@@ -58,20 +66,25 @@ export default class About extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/stylesheet/mixins';
+
 .component {
   background: rgba(0,0,0,0.85);
   color: white;
-  height: 95vh;
-  margin: 15px;
+  height: 100vh;
+  margin: 0;
   box-shadow: 0px 4px 8px rgba(0,0,0,5);
   overflow:auto;
 }
 
 .topImages {
-  padding: 100px 0 100px 0;
+  padding: 100px 0 30px 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @include pc {
+    padding: 100px 0 70px 0;
+  }
 }
 
 .topImage {
@@ -80,14 +93,28 @@ export default class About extends Vue {
   width: 140px;
 }
 
+.wrapSns {
+  color: 'white';
+  font-size: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sns {
+  padding: 0 10px 0 0;
+}
+
 .wrapContents {
   padding: 0 60px 0 60px;
 }
 
 .wrapLikeDislike {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
+  @include pc {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
 }
 
 .whatILike {
@@ -104,7 +131,7 @@ export default class About extends Vue {
 }
 
 .brank {
-  padding: 50px 0 0 0;
+  padding: 80px 0 0 0;
 }
 
 .extLinkIcon {
