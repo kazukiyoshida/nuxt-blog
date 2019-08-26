@@ -125,12 +125,6 @@ body {
   height: 100vh;
 }
 
-.header {
-  height: 30px;
-  width: 100%;
-  background-color: yellow;
-}
-
 .wrapMiddle {
   width: 100%;
   margin: 0 auto;
@@ -175,8 +169,6 @@ body {
     font-size: 16px;
     line-height: 24px;
     display: inline-block;
-
-    background-color: blue;
   };
 }
 
@@ -233,7 +225,6 @@ body {
   height: 50px;
   text-align: center;
   font-size: 4px;
-
 }
 
 .footer-black {
