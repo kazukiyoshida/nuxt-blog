@@ -1,11 +1,9 @@
 <template lang="pug">
 .app
   .wrapAll
-    template(v-if="false")
-      .header
-        p header
     .wrapMiddle
-      .wrapSide
+      //- topページ以外では見出しは隠したいので hideShow をつける
+      .wrapSide(:class="(topPageFlg) ? '' : 'hideShow'")
         .side-title
           n-link(:to="$C.PAGE.TOP")
             p Kazuki
@@ -54,6 +52,12 @@ export default class extends Vue {
   /** 現在の言語 */
   public get lang(): string {
     return this.$store.getters['i18n/getLang']
+  }
+
+  /** TOPページフラグ */
+  public get topPageFlg(): boolean {
+    console.log(this.$route.path)
+    return this.$route.path === this.$C.PAGE.TOP
   }
 
   // fontawesome が一瞬巨大に表示される問題に対応
@@ -135,16 +139,29 @@ body {
 .wrapSide {
   position: absolute;
   bottom: 50px;
-  width: 35%;
+  width: 100%;
   padding: 0 60px 0 60px;
+
+  @include pc {
+    position: absolute;
+    bottom: 50px;
+    width: 35%;
+    padding: 0 60px 0 60px;
+  }
 }
 
 .side-title {
   color: white;
   font-weight: bold;
+  display: inline-block;
+
   font-size: 70px;
   line-height: 70px;
-  display: inline-block;
+
+  @include pc {
+    font-size: 70px;
+    line-height: 70px;
+  }
 }
 
 .side-desc {
@@ -152,11 +169,23 @@ body {
   font-size: 16px;
   line-height: 24px;
   display: inline-block;
+
+  @include pc {
+    font-size: 16px;
+    line-height: 24px;
+    display: inline-block;
+
+    background-color: blue;
+  };
 }
 
 .side-sns {
   color: 'white';
   font-size: 40px;
+
+  @include pc {
+    font-size: 40px;
+  }
 }
 
 .sns {
@@ -187,9 +216,12 @@ body {
 }
 
 .wrapContent {
-  width: 65%;
   height: 100vh;
-  float: right;
+
+  @include pc {
+    width: 65%;
+    float: right;
+  }
 }
 
 .footer{
