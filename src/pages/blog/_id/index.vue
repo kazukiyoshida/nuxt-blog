@@ -45,11 +45,15 @@ export default class Blog extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@import '../../../assets/stylesheet/mixins';
 
 .component {
-  height: 100vh;
   background-color: white;
-  padding: 30px;
+}
+
+.wrapBlog {
+  height: 100vh;
+  padding: 90px 30px 30px 30px;
 }
 
 .h2 {
@@ -72,6 +76,7 @@ export default class Blog extends Vue {
 }
 
 .tag {
+  display: inline-box;
 }
 
 .post {

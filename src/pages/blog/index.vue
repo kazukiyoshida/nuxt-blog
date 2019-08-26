@@ -45,14 +45,19 @@ export default class BlogList extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/stylesheet/mixins';
+
 .component {
-  height: 100vh;
   background-color: white;
-  padding: 50px;
+}
+
+.wrapAllBlogs {
+  height: 100vh;
+  padding: 70px 0 0 0;
 }
 
 .wrapBlog {
-  padding: 30px 0 0 0;
+  padding: 40px 30px 0 30px;
 }
 
 .blog {
@@ -79,8 +84,12 @@ export default class BlogList extends Vue {
   display: inline-block;
 }
 
+a:visited, a {
+  color: black;
+  text-decoration: none;
   &:hover {
-    text-decoration: none;
+    color: gray;
   }
 }
+
 </style>
