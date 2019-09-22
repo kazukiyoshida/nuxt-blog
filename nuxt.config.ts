@@ -50,10 +50,7 @@ const config: NuxtConfiguration = {
     proxy: true
   },
   proxy: {
-    '/api/': {
-      target: 'localhost:3000',
-      pathRewrite: {'^/api/': '/api'}
-    }
+    '/api': 'https://kazukiyoshida.tokyo/api'
   },
   /*
   ** Build configuration
