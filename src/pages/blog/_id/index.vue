@@ -14,7 +14,7 @@
 <script lang="ts">
 import moment from 'moment';
 import { Component, Vue } from 'nuxt-property-decorator'
-import { IPost } from '../interfaces/post'
+import { IPost } from '@/interfaces/post'
 import { COLOR } from '@/constants/app'
 import BlogSpHeader from '@/components/blogSpHeader.vue'
 import BlogTag from '@/components/blogTag.vue'

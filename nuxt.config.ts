@@ -2,6 +2,11 @@ import NuxtConfiguration from '@nuxt/config'
 
 const config: NuxtConfiguration = {
   mode: 'universal',
+  // change host name for Docker
+  server: {
+    port: 3000,
+    host: '0.0.0.0'
+  },
   /*
   ** Headers of the page
   */
@@ -38,7 +43,18 @@ const config: NuxtConfiguration = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api/': {
+      target: 'localhost:3000',
+      pathRewrite: {'^/api/': '/api'}
+    }
+  },
   /*
   ** Build configuration
   */

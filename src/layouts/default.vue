@@ -58,6 +58,7 @@ export default class extends Vue {
   /** TOPページフラグ */
   public get topPageFlg(): boolean {
     console.log(this.$route.path)
+    // @ts-ignore: Unreachable code error
     return this.$route.path === this.$C.PAGE.TOP
   }
 

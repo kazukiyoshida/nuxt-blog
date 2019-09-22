@@ -1,7 +1,7 @@
 {
   "top": {
     "description1": "@御茶ノ水, 東京",
-    "description2": "サーバーサイド・フロントどちらも好きなWebエンジニア. Vim, Golang, Haskell が好き.",
+    "description2": "サーバーサイド・フロントどちらも好きなWebエンジニア🙆 組み込みも機械学習も好き、プログラミング全般楽しんでます！ Vim と Haskell は最高🙆 ",
     "about": "自己紹介",
     "blog": "ブログ",
     "changeLang": "...change to English"
@@ -9,7 +9,7 @@
   "about": {
     "description1": "こんにちは！ブログ見てくれてありがとうございます！",
     "description2": "東京でWebエンジニアをしています吉田和輝です。",
-    "description3": "好きな仕事をしてジムに通って、趣味でもプログラミングして、のびのび生きてます。",
+    "description3": "好きな仕事をしてジムに通って、趣味でもプログラミングして、楽しくやってます！",
     "embedded": "組み込みプログラミング",
     "beer": "お酒",
     "training": "筋トレ",
