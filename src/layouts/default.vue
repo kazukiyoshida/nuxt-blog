@@ -19,6 +19,7 @@
           a(href="$C.LINK.GOOGLEMAPS" target="_blank")
             p {{ $t('top.description1') }}
           p {{ $t('top.description2') }}
+          p {{ $t('top.description3') }}
         .side-buttons
           n-link(:to="$C.PAGE.ABOUT").button {{ $t('top.about') }}
           n-link(:to="$C.PAGE.BLOGS").button {{ $t('top.blog') }}
@@ -210,7 +211,8 @@ body {
 }
 
 .wrapContent {
-  height: 100vh;
+  /** height: 100vh; */
+  height: 100%;
 
   @include pc {
     width: 65%;

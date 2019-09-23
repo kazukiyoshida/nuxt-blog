@@ -4,18 +4,29 @@
     "description2": "I work as a Serverside web developer, and I'm learning Frontend and Embedded system.",
     "about": "about",
     "blog": "blog",
-    "changeLang": "...日本語に変更"
+    "changeLang": "> 日本語"
   },
   "about": {
+    "whoAmI": {
+      "name": "Kazuki Yoshida",
+      "birth": "born in 1992. Now 27.",
+      "from": "from Japan."
+    },
     "description1": "Hi there! Welcome and thank you for visiting my website!",
     "description2": "I'm Kazuki, a web developer based in Tokyo, Japan.",
     "description3": "",
-    "embedded": "Embedded systems programming",
-    "beer": "Beer, Sake",
-    "training": "Work out",
-    "physics": "Physics",
-    "books": "Reeding books",
-    "nosleep": "Work all night..",
+    "like": {
+      "clitools": "CLI tools ( Vim, tmux, zsh, .. ) ",
+      "languages": "Haskell, Golang, TypeScript",
+      "web": "Web programming",
+      "embedded": "Embedded systems programming",
+      "beer": "Beer, sake.",
+      "training": "Work out.",
+      "physics": "Physics"
+    },
+    "dislike": {
+      "nosleep": "Work all night .."
+    },
     "history1": "・1992, Born in Tochigi Prefecture",
     "history2": "・Tokyo Gakugei University Senior High School",
     "history3": "・Kyoto University, Graduate School of Science, Department of Physics",

@@ -1,21 +1,33 @@
 {
   "top": {
     "description1": "@御茶ノ水, 東京",
-    "description2": "サーバーサイド・フロントどちらも好きなWebエンジニア🙆 組み込みも機械学習も好き、プログラミング全般楽しんでます！ Vim と Haskell は最高🙆 ",
+    "description2": "Webエンジニアの日記です.",
+    "description3": "#vim #Go #TypeScript #Nuxt.ts #Haskell ",
     "about": "自己紹介",
     "blog": "ブログ",
-    "changeLang": "...change to English"
+    "changeLang": "> English"
   },
   "about": {
-    "description1": "こんにちは！ブログ見てくれてありがとうございます！",
-    "description2": "東京でWebエンジニアをしています吉田和輝です。",
-    "description3": "好きな仕事をしてジムに通って、趣味でもプログラミングして、楽しくやってます！",
-    "embedded": "組み込みプログラミング",
-    "beer": "お酒",
-    "training": "筋トレ",
-    "physics": "物理学",
-    "books": "読書",
-    "nosleep": "徹夜",
+    "whoAmI": {
+      "name": "吉田 和輝 ( Yoshida Kazuki )",
+      "birth": "1992年生まれ. 27歳.",
+      "from": "栃木県出身"
+    },
+    "description1": "ブログ見てくれてありがとうございます。",
+    "description2": "東京でWebエンジニアをしています。",
+    "description3": "興味の対象が広いので好きなことをブログに書いていくつもりです。",
+    "like": {
+      "clitools": "Vim, tmux などの CLI ツール",
+      "languages": "Haskell, Golang, TypeScript",
+      "web": "ウェブプログラミング",
+      "embedded": "組み込みプログラミング",
+      "beer": "お酒. アイリッシュパブで働いてました.",
+      "training": "筋トレ. パワー.",
+      "physics": "物理学. Weinberg の場の量子論あたりまでやりました"
+    },
+    "dislike": {
+      "nosleep": "徹夜"
+    },
     "history1": "・1992年 栃木県生まれ",
     "history2": "・東京学芸大学附属高校",
     "history3": "・京都大学 理学部 物理学科",

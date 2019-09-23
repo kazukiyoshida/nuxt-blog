@@ -49,6 +49,7 @@ export default class BlogList extends Vue {
 
 .component {
   background-color: white;
+  overflow:auto;
 }
 
 .wrapAllBlogs {

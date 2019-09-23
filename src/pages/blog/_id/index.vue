@@ -9,6 +9,7 @@
         BlogTag(:tagName="tag").tag
     //- https://qiita.com/tscp/items/50b91ec583ae80aebac0
     .post(v-html="this.post.bodyHtml")
+    .blank
 </template>
 
 <script lang="ts">
@@ -49,6 +50,7 @@ export default class Blog extends Vue {
 
 .component {
   background-color: white;
+  overflow:auto;
 }
 
 .wrapBlog {
@@ -82,4 +84,9 @@ export default class Blog extends Vue {
 .post {
   @import '../../../assets/stylesheet/github';
 }
+
+.blank {
+  padding: 80px 0 0 0;
+}
+
 </style>

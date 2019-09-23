@@ -16,60 +16,68 @@
       | {{ $t('about.description1') }}<br />
       | {{ $t('about.description2') }}<br />
       | {{ $t('about.description3') }}
+    .whoAmI
+      p.sectionTitle
+      p.line.sectionTitle
+      p.line {{ $t('about.whoAmI.name') }}
+      p.line {{ $t('about.whoAmI.birth') }}
+      p.line {{ $t('about.whoAmI.from') }}
+      p.line.sectionTitle
+      p.line.sectionTitle
     .wrapLikeDislike
       .whatILike
-        p.sectionTitle What I Like
-        p 🙆 Vim
-        p 🙆 Haskell, Golang, TypeScript
-        p 🙆 {{ $t('about.embedded') }}
-        p 🙆 {{ $t('about.beer') }}
-        p 🙆 {{ $t('about.training') }}
-        p 🙆 {{ $t('about.physics') }}
-        p 🙆 {{ $t('about.books') }}
+        p.sectionTitle Like
+        p.line 🙆 {{ $t('about.like.languages') }}
+        p.line 🙆 {{ $t('about.like.clitools') }}
+        p.line 🙆 {{ $t('about.like.web') }}
+        p.line 🙆 {{ $t('about.like.embedded') }}
+        p.line 🙆 {{ $t('about.like.beer') }}
+        p.line 🙆 {{ $t('about.like.training') }}
+        p.line 🙆 {{ $t('about.like.physics') }}
       .whatIDislike
-        p.sectionTitle What I Dislike
-        p 😇 {{ $t('about.nosleep') }}
+        p.sectionTitle Dislike
+        p.line 😇 {{ $t('about.dislike.nosleep') }}
     .History
       p.sectionTitle History
-      p {{ $t('about.history1') }}
-      p {{ $t('about.history2') }}
-      p {{ $t('about.history3') }}
+      p.line {{ $t('about.history1') }}
+      p.line {{ $t('about.history2') }}
+      p.line {{ $t('about.history3') }}
       .showHide
         div
-          a(href="http://www.ton.scphys.kyoto-u.ac.jp/shinomotoG/index.html")
+          a.line(href="http://www.ton.scphys.kyoto-u.ac.jp/shinomotoG/index.html")
             | {{ $t('about.lab1') }}
             fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
+        div.line
+          span.space {{ $t('about.lab2') }}
         div
-          span ....{{ $t('about.lab2') }}
-        div
-          a(href="https://www.igpi.co.jp" target="_blank")
+          a.line(href="https://www.igpi.co.jp" target="_blank")
             | {{ $t('about.officeA1') }}
             fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
+        div.line
+          span.space {{ $t('about.officeA2') }}
         div
-          span ....{{ $t('about.officeA2') }}
-        div
-          a(href="https://www.team-lab.com" target="_blank")
+          a.line(href="https://www.team-lab.com" target="_blank")
             | {{ $t('about.officeB1') }}
             fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
-        div
-          span ....{{ $t('about.officeB2') }}
+        div.line
+          span.space {{ $t('about.officeB2') }}
       .hideShow
         div
-          a(href="http://www.ton.scphys.kyoto-u.ac.jp/shinomotoG/index.html")
+          a.line(href="http://www.ton.scphys.kyoto-u.ac.jp/shinomotoG/index.html")
             | {{ $t('about.lab1') }}
             fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
           span {{ $t('about.lab2') }}
         div
-          a(href="https://www.igpi.co.jp" target="_blank")
+          a.line(href="https://www.igpi.co.jp" target="_blank")
             | {{ $t('about.officeA1') }}
             fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
           span {{ $t('about.officeA2') }}
         div
-          a(href="https://www.team-lab.com" target="_blank")
+          a.line(href="https://www.team-lab.com" target="_blank")
             | {{ $t('about.officeB1') }}
             fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
           span {{ $t('about.officeB2') }}
-    .brank
+    .blank
 </template>
 
 <script lang="ts">
@@ -99,6 +107,7 @@ export default class About extends Vue {
 
 .topImages {
   padding: 100px 0 30px 0;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -143,15 +152,23 @@ export default class About extends Vue {
 
 .sectionTitle {
   font-size: 30px;
-  padding: 20px 0 0 0;
+  padding: 30px 0 0 0;
 }
 
 .description {
   padding: 20px 0 20px 0;
 }
 
-.brank {
-  padding: 80px 0 0 0;
+.blank {
+  padding: 100px 0 0 0;
+}
+
+.line {
+  padding: 5px 0 5px 0;
+}
+
+.space {
+  margin-left: 40px;
 }
 
 .extLinkIcon {

@@ -64,7 +64,7 @@ export default class BlogSpHeader extends Vue {}
 
 .menu {
   font-weight: 500;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 10px;
   display: inline-block;
 }
 

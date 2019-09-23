@@ -7,9 +7,6 @@ const config: NuxtConfiguration = {
     port: 3000,
     host: '0.0.0.0'
   },
-  /*
-  ** Headers of the page
-  */
   head: {
     title: "Kazuki's Blog",
     meta: [
@@ -26,11 +23,6 @@ const config: NuxtConfiguration = {
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
-  css: [
-  ],
   /*
   ** Plugins to load before mounting the App
   */
