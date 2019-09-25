@@ -1,7 +1,8 @@
 {
   "top": {
     "description1": "@Tokyo, Japan",
-    "description2": "I work as a Serverside web developer, and I'm learning Frontend and Embedded system.",
+    "description2": "Web developer",
+    "description3": "#vim #Go #TypeScript #Nuxt.ts #Haskell ",
     "about": "about",
     "blog": "blog",
     "changeLang": "> 日本語"
