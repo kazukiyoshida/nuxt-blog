@@ -107,7 +107,6 @@ export default class About extends Vue {
 
 .topImages {
   padding: 100px 0 30px 0;
-  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -120,6 +119,7 @@ export default class About extends Vue {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   width: 140px;
+  height: 140px;
 }
 
 .wrapSns {
@@ -135,7 +135,10 @@ export default class About extends Vue {
 }
 
 .wrapContents {
-  padding: 0 60px 0 60px;
+  padding: 0 30px 0 30px;
+  @include pc {
+    padding: 0 60px 0 60px;
+  }
 }
 
 .wrapLikeDislike {

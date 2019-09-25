@@ -102,7 +102,7 @@ html {
 
 @import '../assets/stylesheet/mixins';
 $padding-size: 20px;
-$hero-image: "../assets/images/unsplash.png";
+$hero-image: "../assets/images/unsplash-min.png";
 
 * {
   margin: 0;
@@ -120,11 +120,13 @@ body {
   background-size: cover;
   background-position: center;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  overscroll-behavior: none;
 }
 
 .wrapAll {
   position: relative;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
 }
 
 .wrapMiddle {
@@ -137,9 +139,10 @@ body {
   position: absolute;
   bottom: 50px;
   width: 100%;
-  padding: 0 60px 0 60px;
+  padding: 0 40px 0 40px;
 
   @include pc {
+    padding: 0 60px 0 60px;
     position: absolute;
     bottom: 50px;
     width: 35%;
@@ -198,7 +201,7 @@ body {
   display: block;
   width: 40%;
   padding: 8px;
-  margin: 10px 20px 10px 20px;
+  margin: 10px 10px 10px 10px;
   text-align: center;
   color: white;
   border: 2px solid white;

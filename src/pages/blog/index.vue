@@ -1,6 +1,7 @@
 <template lang="pug">
 .component
-  BlogSpHeader().showHide
+  .wrapSpHeader
+    BlogSpHeader().showHide
   .wrapAllBlogs
     template(v-for="post in posts")
       .wrapBlog
@@ -69,12 +70,16 @@ export default class BlogList extends Vue {
 
 .component {
   background-color: white;
-  overflow:auto;
+}
+
+.wrapSpHeader {
+  z-index: 999;
 }
 
 .wrapAllBlogs {
   height: 100vh;
   padding: 70px 0 0 0;
+  overflow: auto;
 }
 
 .wrapBlog {

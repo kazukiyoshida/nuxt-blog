@@ -24,9 +24,8 @@ export default class BlogSpHeader extends Vue {}
   position: fixed;
   width: 100%;
   background-color: white;
-  padding: 20px 30px 10px 30px;
+  padding: 8px 30px 8px 30px;
   box-shadow: 0 0 3px 0 rgba(0,0,0,0.6);
-
 
   /** line-height の基準 */
   line-height: 40px;

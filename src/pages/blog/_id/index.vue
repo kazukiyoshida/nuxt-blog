@@ -1,6 +1,7 @@
 <template lang="pug">
 .component
-  BlogSpHeader().showHide
+  .wrapSpHeader
+    BlogSpHeader().showHide
   .wrapBlog
     p.title {{ post.title }}
     p.createdAt {{ date(post.createdAt) }}
@@ -50,16 +51,16 @@ export default class Blog extends Vue {
 
 .component {
   background-color: white;
-  overflow:auto;
+}
+
+.wrapSpHeader {
+  z-index: 999;
 }
 
 .wrapBlog {
   height: 100vh;
   padding: 90px 30px 30px 30px;
-}
-
-.h2 {
-  color: red;
+  overflow: auto;
 }
 
 .title {
