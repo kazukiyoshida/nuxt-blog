@@ -5,7 +5,7 @@ const config: NuxtConfiguration = {
   // change host name for Docker
   server: {
     port: 3000,
-    host: '0.0.0.0'
+    host: '10.0.0.38'
   },
   head: {
     title: "Kazuki's Blog",
