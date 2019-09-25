@@ -1,4 +1,5 @@
 const express = require('express')
+const logger = require('morgan')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const config = require('../../nuxt.config.ts')
@@ -9,6 +10,7 @@ const posts = require('./posts')
 const post = require('./post')
 
 const app = express()
+app.use(logger("short"))
 
 async function start() {
   // API routing
