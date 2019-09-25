@@ -12,12 +12,14 @@
 </template>
 
 <script lang="ts">
+import _ from 'lodash'
 import moment from 'moment';
 import { Component, Vue } from 'nuxt-property-decorator'
 import { IPostSummary } from '@/interfaces/posts'
 import { COLOR } from '@/constants/app'
 import BlogSpHeader from '@/components/blogSpHeader.vue'
 import BlogTag from '@/components/blogTag.vue'
+import { fileMap } from '@/articles/summary.json'
 
 @Component({
   components: {
@@ -36,10 +38,28 @@ export default class BlogList extends Vue {
   }
 
   /** ライフサイクル */
-  public async fetch({ store }) {
+  public async fetch({ store, error }) {
     store.commit('i18n/setBackgroundColor', COLOR.WHITE)
-    console.log(">>> blog list fetch")
-    await store.dispatch('post/fetchPosts')
+
+    // SSR なので API を経由せずファイルを直接読み取りに行く
+    // WIP: API サーバーとの共通処理をまとめる
+    const posts: IPostSummary[] = _.reduce(
+      fileMap,
+      (accm: IPostSummary[], file: any): IPostSummary[] => {
+        const ps: IPostSummary = {
+          id: file.id,
+          title: file.title,
+          createdAt: file.created_at,
+          updatedAt: file.updated_at,
+          tags: file.tags.split(','),
+          topImageUrl: file.top_image,
+        }
+        accm.push(ps)
+        return accm
+      },
+      []
+    )
+    store.commit('post/savePosts', posts)
   }
 }
 </script>
