@@ -1,7 +1,7 @@
 {
-  "name": "groomingWebBff",
+  "name": "nuxt-blog",
   "version": "1.0.0",
-  "description": "grooming web bff",
+  "description": "nuxt-blog",
   "author": "Kazuki Yoshida",
   "private": true,
   "scripts": {

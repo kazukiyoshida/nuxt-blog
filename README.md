@@ -1,4 +1,4 @@
-# groomingWebBff
+# Nuxt-Blog
 
 Nuxt, Express, TypeScript で作るブログです.
 
