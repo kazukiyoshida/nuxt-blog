@@ -1,5 +1,5 @@
 /**
- * 投稿一覧
+ * Posts summary API Interface
  */
 export interface IPosts {
   posts: IPostSummary[]

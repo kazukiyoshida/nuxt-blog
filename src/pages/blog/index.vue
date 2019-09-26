@@ -34,6 +34,7 @@ export default class BlogList extends Vue {
     return this.$store.getters['post/getPosts']
   }
 
+  /** 2019-09-23T00:00:00.000Z 形式の日付文字列を 2019/09/23 に変換する */
   public date(t: string): string {
     return moment(Date.parse(t)).format('YYYY/MM/DD')
   }
@@ -42,7 +43,7 @@ export default class BlogList extends Vue {
   public async fetch({ store, error }) {
     store.commit('i18n/setBackgroundColor', COLOR.WHITE)
 
-    // SSR なので API を経由せずファイルを直接読み取りに行く
+    // SSR では API を経由せずファイルを直接読み取りに行く
     // WIP: API サーバーとの共通処理をまとめる
     const posts: IPostSummary[] = _.reduce(
       fileMap,

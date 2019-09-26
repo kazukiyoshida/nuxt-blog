@@ -97,7 +97,11 @@ export default class About extends Vue {
 @import '../../assets/stylesheet/mixins';
 
 .component {
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.6);
+  @include pc {
+    /** PC の方が SP よりもなぜか明るく見えるので透過度を下げる */
+    background: rgba(0,0,0,0.85);
+  }
   color: white;
   height: 100vh;
   margin: 0;

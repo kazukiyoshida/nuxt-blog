@@ -1,5 +1,5 @@
 /**
- * ユーザー詳細 API
+ * Post Detail API Interface
  */
 export interface IPost {
   id: number
