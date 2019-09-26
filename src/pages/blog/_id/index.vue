@@ -14,12 +14,17 @@
 </template>
 
 <script lang="ts">
+import _ from 'lodash'
 import moment from 'moment';
 import { Component, Vue } from 'nuxt-property-decorator'
 import { IPost } from '@/interfaces/post'
-import { COLOR } from '@/constants/app'
+import {
+  COLOR,
+  ERROR_NO_POST
+} from '@/constants/'
 import BlogSpHeader from '@/components/blogSpHeader.vue'
 import BlogTag from '@/components/blogTag.vue'
+import { fileMap } from '@/articles/summary.json'
 
 @Component({
   components: {
@@ -38,10 +43,32 @@ export default class Blog extends Vue {
   }
 
   /** ライフサイクル */
-  public async fetch({ store, route }) {
+  public async fetch({ store, route, error }) {
     store.commit('i18n/setBackgroundColor', COLOR.WHITE)
-    console.log(">>> blog fetch")
-    await store.dispatch('post/fetchPost', Number(route.params.id))
+
+    const article = _.find(fileMap, ['id', Number(route.params.id)])
+    if (!article) {
+      error({
+        message: ERROR_NO_POST
+      })
+    } else {
+      // 早期リターンさせてもコンパイラが not undefined 判定してくれない
+      const p = require(`../../../articles/${article.base}`)
+      const post: IPost = {
+        id: p.id,
+        title: p.title,
+        createdAt: p.created_at,
+        updatedAt: p.updated_at,
+        tags: p.tags.split(','),
+        topImageUrl: p.top_image,
+        bodyContent: p.bodyContent,
+        bodyHtml: p.bodyHtml,
+      }
+      store.commit('post/savePost', {
+        id: route.params.id,
+        post: post
+      })
+    }
   }
 }
 </script>
