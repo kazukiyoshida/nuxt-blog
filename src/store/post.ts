@@ -6,23 +6,23 @@ import { IPost } from '@/interfaces/post'
 import { IPostSummary } from '@/interfaces/posts'
 
 export interface IState {
-  posts: IPostSummary[] | null
-  post: Record<string, IPost>
+  posts: IPostSummary[]
+  post: Record<number, IPost>
 }
 
 export const state = (): IState => ({
-  posts: null,
+  posts: [],
   post: {}
 })
 
 export const getters = {
-  getPosts(state: IState): IPostSummary[] | null {
+  getPosts(state: IState): IPostSummary[] {
     return state.posts
   },
   getPost: (state: IState): any => (
     id: number
-  ): IPost | null => {
-    return state.post[String(id)]
+  ): IPost | undefined => {
+    return state.post[id]
   }
 }
 
@@ -35,7 +35,7 @@ export const mutations = {
     payload: { id: number, post: IPost }
   ): void {
     const { id, post } = payload
-    Vue.set(state.post, String(id), post)
+    Vue.set(state.post, id, post)
   }
 }
 
