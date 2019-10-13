@@ -20,7 +20,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 import { IPost } from '@/interfaces/post'
 import {
   COLOR,
-  ERROR_NO_POST
+  ERROR
 } from '@/constants/'
 import BlogSpHeader from '@/components/blogSpHeader.vue'
 import BlogTag from '@/components/blogTag.vue'
@@ -49,7 +49,7 @@ export default class Blog extends Vue {
     const article = _.find(fileMap, ['id', Number(route.params.id)])
     if (!article) {
       error({
-        message: ERROR_NO_POST
+        message: ERROR.NO_POST
       })
     } else {
       // 早期リターンさせてもコンパイラが not undefined 判定してくれない

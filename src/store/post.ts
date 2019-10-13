@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import _ from 'lodash'
-import { API } from '@/constants/api'
+import { API } from '@/constants/'
 import { IPost } from '@/interfaces/post'
 import { IPostSummary } from '@/interfaces/posts'
 
