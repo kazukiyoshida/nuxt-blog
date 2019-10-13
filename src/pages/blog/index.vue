@@ -30,7 +30,7 @@ import { fileMap } from '@/articles/summary.json'
 })
 export default class BlogList extends Vue {
   /** Store データの Getter */
-  public get posts(): IPostSummary[] | null {
+  public get posts(): IPostSummary[] {
     return this.$store.getters['post/getPosts']
   }
 

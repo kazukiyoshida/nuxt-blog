@@ -12,9 +12,23 @@
       "ext": ".json",
       "sourceBase": "2019-09-23.md",
       "sourceExt": ".md"
+    },
+    "src/articles/2019-10-13.json": {
+      "id": 4,
+      "title": "Nuxt + Express で Markdown ベースのブログを開発した",
+      "created_at": "2019-10-13T00:00:00.000Z",
+      "updated_at": "2019-10-13T00:00:00.000Z",
+      "draft": false,
+      "tags": "Nuxt.js,Vue.js,Microservices,TypeScript",
+      "dir": "src/articles",
+      "base": "2019-10-13.json",
+      "ext": ".json",
+      "sourceBase": "2019-10-13.md",
+      "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
-    "src/markdown/2019-09-23.md"
+    "src/markdown/2019-09-23.md",
+    "src/markdown/2019-10-13.md"
   ]
 }

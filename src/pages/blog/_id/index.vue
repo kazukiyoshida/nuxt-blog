@@ -20,7 +20,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 import { IPost } from '@/interfaces/post'
 import {
   COLOR,
-  ERROR_NO_POST
+  ERROR
 } from '@/constants/'
 import BlogSpHeader from '@/components/blogSpHeader.vue'
 import BlogTag from '@/components/blogTag.vue'
@@ -34,8 +34,14 @@ import { fileMap } from '@/articles/summary.json'
 })
 export default class Blog extends Vue {
   /** Store データの Getter */
-  public get post(): IPost | null {
-    return this.$store.getters['post/getPost'](Number(this.$route.params.id))
+  public get post(): IPost {
+    const post: IPost | undefined = this.$store.getters['post/getPost'](
+      Number(this.$route.params.id)
+    )
+    if (!post) {
+      // TODO: エラーハンドリング
+    }
+    return post
   }
 
   public date(t: string): string {
@@ -49,7 +55,7 @@ export default class Blog extends Vue {
     const article = _.find(fileMap, ['id', Number(route.params.id)])
     if (!article) {
       error({
-        message: ERROR_NO_POST
+        message: ERROR.NO_POST
       })
     } else {
       // 早期リターンさせてもコンパイラが not undefined 判定してくれない
