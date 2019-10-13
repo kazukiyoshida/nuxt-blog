@@ -44,19 +44,13 @@ export const actions = {
     this: Vue,
     { state, commit }: any
   ): Promise<void> {
-    console.log('>> fetchPosts', state.posts)
-
     // キャッシュがあれば早期リターン
     if (state.posts) return
 
-    console.log("get request : ", API.POSTS)
-
     try {
       const { data } = await axios.get(API.POSTS)
-      console.log("get response : ", data)
       commit('savePosts', data.posts)
     } catch (err) {
-      console.log("!!!!!!!!!! error !!!!!!!!!!!!", err)
       throw err
     }
   },
@@ -66,16 +60,10 @@ export const actions = {
     { state, commit }: any,
     id: number
   ): Promise<void> {
-    console.log('>> fetchPost id: ', id)
-
     // キャッシュがあれば早期リターン
     if (_.keys(state.post).indexOf(String(id)) >= 0) return
-
-    console.log("get request : ", API.POST + String(id))
 
     const { data } = await axios.get(API.POST + String(id))
     commit('savePost', { id: id, post: data })
   },
-
-
 }
