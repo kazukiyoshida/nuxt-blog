@@ -2,7 +2,7 @@
 .component
   .wrapSpHeader
     BlogSpHeader().showHide
-  .wrapBlog
+  .wrapBlog(v-if="post")
     p.title {{ post.title }}
     p.createdAt {{ date(post.createdAt) }}
     .wrapTags
@@ -34,14 +34,8 @@ import { fileMap } from '@/articles/summary.json'
 })
 export default class Blog extends Vue {
   /** Store データの Getter */
-  public get post(): IPost {
-    const post: IPost | undefined = this.$store.getters['post/getPost'](
-      Number(this.$route.params.id)
-    )
-    if (!post) {
-      // TODO: エラーハンドリング
-    }
-    return post
+  public get post(): IPost | undefined {
+    return this.$store.getters['post/getPost'](Number(this.$route.params.id))
   }
 
   public date(t: string): string {

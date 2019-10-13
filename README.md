@@ -10,9 +10,6 @@ $ yarn install
 
 # サーバー起動
 $ yarn dev
-
-# markdwon を json へ変換
-processmd "src/markdown/*.md" --outputDir src/articles --stdout > src/articles/summary.json
 ```
 
 ## Deploy
