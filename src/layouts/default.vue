@@ -37,7 +37,7 @@
     .wrapFooter(:class="(topPageFlg) ? '' : 'hideShow'")
       .footer(
         :class="this.backgroundColor === $C.COLOR.BLACK ? 'footer-white' : 'footer-black'"
-      ) © 2019 KazukiYoshida
+      ) © 2021 KazukiYoshida
 </template>
 
 <script lang="ts">
@@ -145,7 +145,7 @@ body {
     padding: 0 60px 0 60px;
     position: absolute;
     bottom: 50px;
-    width: 35%;
+    width: 30%;
     padding: 0 60px 0 60px;
   }
 }
@@ -218,7 +218,7 @@ body {
   height: 100%;
 
   @include pc {
-    width: 65%;
+    width: 72%;
     float: right;
   }
 }
@@ -230,7 +230,7 @@ body {
   width: 100%;
   height: 50px;
   text-align: center;
-  font-size: 4px;
+  font-size: 10px;
 }
 
 .footer-black {

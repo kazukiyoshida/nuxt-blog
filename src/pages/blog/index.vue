@@ -85,6 +85,10 @@ export default class BlogList extends Vue {
 
 .wrapBlog {
   padding: 40px 30px 0 30px;
+
+  @include pc {
+    padding: 40px 130px 0 130px;
+  }
 }
 
 .blog {

@@ -54,6 +54,7 @@ export default class Blog extends Vue {
     } else {
       // 早期リターンさせてもコンパイラが not undefined 判定してくれない
       const p = require(`../../../articles/${article.base}`)
+
       const post: IPost = {
         id: p.id,
         title: p.title,
@@ -88,6 +89,10 @@ export default class Blog extends Vue {
   height: 100vh;
   padding: 90px 30px 30px 30px;
   overflow: auto;
+
+  @include pc {
+    padding: 90px 130px 30px 130px;
+  }
 }
 
 .title {
@@ -116,5 +121,4 @@ export default class Blog extends Vue {
 .blank {
   padding: 80px 0 0 0;
 }
-
 </style>
