@@ -62,7 +62,7 @@ export default class Blog extends Vue {
         tags: p.tags.split(','),
         topImageUrl: p.top_image,
         bodyContent: p.bodyContent,
-        bodyHtml: p.bodyHtml,
+        bodyHtml: p.bodyHtml.join("\n"),
       }
       store.commit('post/savePost', {
         id: route.params.id,
