@@ -25,10 +25,24 @@
       "ext": ".json",
       "sourceBase": "2019-10-13.md",
       "sourceExt": ".md"
+    },
+    "src/articles/2021-01-08.json": {
+      "id": 5,
+      "title": "Rust がなぜ好きなのか",
+      "created_at": "2021-01-08T00:00:00.000Z",
+      "updated_at": "2021-01-08T00:00:00.000Z",
+      "draft": false,
+      "tags": "Rust",
+      "dir": "src/articles",
+      "base": "2021-01-08.json",
+      "ext": ".json",
+      "sourceBase": "2021-01-08.md",
+      "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
     "src/markdown/2019-09-23.md",
-    "src/markdown/2019-10-13.md"
+    "src/markdown/2019-10-13.md",
+    "src/markdown/2021-01-08.md"
   ]
 }
