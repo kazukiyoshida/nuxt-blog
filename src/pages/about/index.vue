@@ -1,7 +1,6 @@
 <template lang="pug">
 .component
   .topImages
-    img(src="../../assets/images/sheep.png").topImage
     img(src="../../assets/images/hitachikaeri.jpeg").topImage
   .showHide
     .wrapSns
@@ -12,71 +11,25 @@
       a(:href="$C.LINK.INSTAGRAM" target="_blank").sns
         fa-icon(:icon="['fab', 'instagram']")
   .wrapContents
-    .description
-      | {{ $t('about.description1') }}<br />
-      | {{ $t('about.description2') }}<br />
-      | {{ $t('about.description3') }}
     .whoAmI
       p.sectionTitle
-      p.line.sectionTitle
+      p.line.sectionTitle {{ $t('about.whoAmI.title') }}
       p.line {{ $t('about.whoAmI.name') }}
       p.line {{ $t('about.whoAmI.birth') }}
-      p.line {{ $t('about.whoAmI.from') }}
-      p.line.sectionTitle
-      p.line.sectionTitle
-    .wrapLikeDislike
-      .whatILike
-        p.sectionTitle Like
-        p.line 🙆 {{ $t('about.like.languages') }}
-        p.line 🙆 {{ $t('about.like.clitools') }}
-        p.line 🙆 {{ $t('about.like.web') }}
-        p.line 🙆 {{ $t('about.like.embedded') }}
-        p.line 🙆 {{ $t('about.like.beer') }}
-        p.line 🙆 {{ $t('about.like.training') }}
-        p.line 🙆 {{ $t('about.like.physics') }}
-      .whatIDislike
-        p.sectionTitle Dislike
-        p.line 😇 {{ $t('about.dislike.nosleep') }}
+      p.line {{ $t('about.whoAmI.where') }}
     .History
-      p.sectionTitle History
-      p.line {{ $t('about.history1') }}
-      p.line {{ $t('about.history2') }}
+      p.sectionTitle {{ $t('about.historyTitle') }}
       p.line {{ $t('about.history3') }}
-      .showHide
-        div
-          a.line(href="http://www.ton.scphys.kyoto-u.ac.jp/shinomotoG/index.html")
-            | {{ $t('about.lab1') }}
-            fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
-        div.line
-          span.space {{ $t('about.lab2') }}
-        div
-          a.line(href="https://www.igpi.co.jp" target="_blank")
-            | {{ $t('about.officeA1') }}
-            fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
-        div.line
-          span.space {{ $t('about.officeA2') }}
-        div
-          a.line(href="https://www.team-lab.com" target="_blank")
-            | {{ $t('about.officeB1') }}
-            fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
-        div.line
-          span.space {{ $t('about.officeB2') }}
-      .hideShow
-        div
-          a.line(href="http://www.ton.scphys.kyoto-u.ac.jp/shinomotoG/index.html")
-            | {{ $t('about.lab1') }}
-            fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
-          span {{ $t('about.lab2') }}
-        div
-          a.line(href="https://www.igpi.co.jp" target="_blank")
-            | {{ $t('about.officeA1') }}
-            fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
-          span {{ $t('about.officeA2') }}
-        div
-          a.line(href="https://www.team-lab.com" target="_blank")
-            | {{ $t('about.officeB1') }}
-            fa-icon(:icon="['fas', 'external-link-alt']").extLinkIcon
-          span {{ $t('about.officeB2') }}
+      p.line {{ $t('about.history2') }}
+      p(v-if="lang == $C.LANG.JA").line {{ $t('about.history1') }}
+    .Job
+      p.sectionTitle {{ $t('about.jobTitle') }}
+      p.line {{ $t('about.job2') }}
+      p.line {{ $t('about.job1') }}
+    .Like(v-if="lang == $C.LANG.JA")
+      p.sectionTitle 趣味
+      p.line {{ $t('about.like1') }}
+      p.line {{ $t('about.like2') }}
     .blank
 </template>
 
@@ -86,6 +39,11 @@ import { COLOR } from '@/constants/app'
 
 @Component
 export default class About extends Vue {
+  /** 現在の言語 */
+  public get lang(): string {
+    return this.$store.getters['i18n/getLang']
+  }
+
   /** ライフサイクル */
   public async fetch({ store }) {
     store.commit('i18n/setBackgroundColor', COLOR.BLACK)
@@ -97,10 +55,10 @@ export default class About extends Vue {
 @import '../../assets/stylesheet/mixins';
 
 .component {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.85);
   @include pc {
     /** PC の方が SP よりもなぜか明るく見えるので透過度を下げる */
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.90);
   }
   color: white;
   height: 100vh;

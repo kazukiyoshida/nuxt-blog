@@ -1,41 +1,24 @@
 {
   "top": {
-    "description1": "@Tokyo, Japan",
-    "description2": "Web developer",
-    "description3": "#vim #Go #TypeScript #Nuxt.ts #Haskell ",
+    "description1": "@teamLab, Japan",
+    "description2": "my note of software engineering",
+    "description3": "#Rust #Go #Vim",
     "about": "about",
     "blog": "blog",
     "changeLang": "> 日本語"
   },
   "about": {
     "whoAmI": {
+      "title": "Profile",
       "name": "Kazuki Yoshida",
-      "birth": "born in 1992. Now 27.",
-      "from": "from Japan."
+      "birth": "28 years old",
+      "where": "Toyo, Japan"
     },
-    "description1": "Hi there! Welcome and thank you for visiting my website!",
-    "description2": "I'm Kazuki, a web developer based in Tokyo, Japan.",
-    "description3": "",
-    "like": {
-      "clitools": "CLI tools ( Vim, tmux, zsh, .. ) ",
-      "languages": "Haskell, Golang, TypeScript",
-      "web": "Web programming",
-      "embedded": "Embedded systems programming",
-      "beer": "Beer, sake.",
-      "training": "Work out.",
-      "physics": "Physics"
-    },
-    "dislike": {
-      "nosleep": "Work all night .."
-    },
-    "history1": "・1992, Born in Tochigi Prefecture",
-    "history2": "・Tokyo Gakugei University Senior High School",
-    "history3": "・Kyoto University, Graduate School of Science, Department of Physics",
-    "lab1": "・Kyoto University, Graduate School of Science, Division of Physics and Astronomy",
-    "lab2": "：Machine Learning, Statistical Analysis",
-    "officeA1": "・Industrial Growth Platform, Inc（ IGPI ）",
-    "officeA2": "：Business Consultant & Data analyst",
-    "officeB1": "・TeamLab",
-    "officeB2": "：Web Developer"
+    "historyTitle": "Educational background",
+    "history2": "2011.4 - 2015.3 : B.Sc. Physics, Kyoto University, Japan",
+    "history3": "2015.4 - 2017.3 : M.Sc. Physics, Kyoto University, Japan",
+    "jobTitle": "Work Experience",
+    "job1": "2017.4 - 2018.2 : IGPI Business Analytics & Intelligence, Inc.",
+    "job2": "2018.2 - present : teamLab"
   }
 }
