@@ -1,41 +1,27 @@
 {
   "top": {
-    "description1": "@御茶ノ水, 東京",
-    "description2": "Webエンジニアの日記です.",
-    "description3": "#vim #Go #TypeScript #Nuxt.ts #Haskell ",
+    "description1": "@teamLab, 東京",
+    "description2": "Webエンジニアの記録です.",
+    "description3": "#Rust #Go #Vim",
     "about": "自己紹介",
     "blog": "ブログ",
     "changeLang": "> English"
   },
   "about": {
     "whoAmI": {
-      "name": "吉田 和輝 ( Yoshida Kazuki )",
-      "birth": "1992年生まれ. 27歳.",
-      "from": "栃木県出身"
+      "title": "プロフィール",
+      "name": "吉田 和輝 (よしだ かずき)",
+      "birth": "28歳",
+      "where": "東京都在住"
     },
-    "description1": "ブログ見てくれてありがとうございます。",
-    "description2": "東京でWebエンジニアをしています。",
-    "description3": "興味の対象が広いので好きなことをブログに書いていくつもりです。",
-    "like": {
-      "clitools": "Vim, tmux などの CLI ツール",
-      "languages": "Haskell, Golang, TypeScript",
-      "web": "ウェブプログラミング",
-      "embedded": "組み込みプログラミング",
-      "beer": "お酒. アイリッシュパブで働いてました.",
-      "training": "筋トレ. パワー.",
-      "physics": "物理学. Weinberg の場の量子論あたりまでやりました"
-    },
-    "dislike": {
-      "nosleep": "徹夜"
-    },
-    "history1": "・1992年 栃木県生まれ",
-    "history2": "・東京学芸大学附属高校",
-    "history3": "・京都大学 理学部 物理学科",
-    "lab1": "・京都大学大学院 理学研究科",
-    "lab2": "：機械学習と統計解析",
-    "officeA1": "・経営共創基盤（ IGPI ）",
-    "officeA2": "：経営コンサルタント",
-    "officeB1": "・チームラボ",
-    "officeB2": "：Webエンジニア"
+    "historyTitle": "学歴",
+    "history1": "2011年 3月 : 東京学芸大学附属高校 卒業",
+    "history2": "2015年 3月 : 京都大学 理学部物理学科 卒業",
+    "history3": "2017年 3月 : 京都大学大学院 理学研究科 物理学・宇宙物理学専攻 卒業",
+    "jobTitle": "職歴",
+    "job1": "2017年 4月 ~ 2018年2月 : 株式会社IGPIビジネスアナリティクス&インテリジェンス（コンサルタント）",
+    "job2": "2018年 2月 ~ 現在 : チームラボ株式会社（ソフトウェア エンジニア）",
+    "like1": "・中学校〜大学生の頃はテニスを続け、大学院生の頃からはランニングが趣味です",
+    "like2": "・お酒が好きで学生の頃はアイリッシュパブでアルバイトをしていました"
   }
 }

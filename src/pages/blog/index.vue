@@ -31,7 +31,7 @@ import { fileMap } from '@/articles/summary.json'
 export default class BlogList extends Vue {
   /** Store データの Getter */
   public get posts(): IPostSummary[] {
-    return this.$store.getters['post/getPosts']
+    return this.$store.getters['post/getPosts'].slice().reverse()
   }
 
   /** 2019-09-23T00:00:00.000Z 形式の日付文字列を 2019/09/23 に変換する */
