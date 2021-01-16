@@ -15,7 +15,7 @@
     },
     "src/articles/2019-10-13.json": {
       "id": 4,
-      "title": "Nuxt + Express で Markdown ベースのブログを開発した",
+      "title": "Nuxt + Express で Markdown ベースのブログを開発しました",
       "created_at": "2019-10-13T00:00:00.000Z",
       "updated_at": "2019-10-13T00:00:00.000Z",
       "draft": false,
@@ -28,7 +28,7 @@
     },
     "src/articles/2021-01-08.json": {
       "id": 5,
-      "title": "Rust がなぜ好きなのか",
+      "title": "なぜRustが好きなのか",
       "created_at": "2021-01-08T00:00:00.000Z",
       "updated_at": "2021-01-08T00:00:00.000Z",
       "draft": false,
