@@ -38,11 +38,25 @@
       "ext": ".json",
       "sourceBase": "2021-01-08.md",
       "sourceExt": ".md"
+    },
+    "src/articles/2021-01-18.json": {
+      "id": 6,
+      "title": "AVR ATmega328p のエミュレータを Rust で実装する",
+      "created_at": "2021-01-18T00:00:00.000Z",
+      "updated_at": "2021-01-18T00:00:00.000Z",
+      "draft": false,
+      "tags": "Rust,AVR,CPU Emulator",
+      "dir": "src/articles",
+      "base": "2021-01-18.json",
+      "ext": ".json",
+      "sourceBase": "2021-01-18.md",
+      "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
     "src/markdown/2019-09-23.md",
     "src/markdown/2019-10-13.md",
-    "src/markdown/2021-01-08.md"
+    "src/markdown/2021-01-08.md",
+    "src/markdown/2021-01-18.md"
   ]
 }
