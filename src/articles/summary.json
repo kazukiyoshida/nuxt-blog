@@ -64,6 +64,19 @@
       "ext": ".json",
       "sourceBase": "2021-01-18.md",
       "sourceExt": ".md"
+    },
+    "src/articles/2021-01-26.json": {
+      "id": 8,
+      "title": "Rust のアクターモデルで依存性逆転",
+      "created_at": "2021-01-26T00:00:00.000Z",
+      "updated_at": "2021-01-26T00:00:00.000Z",
+      "draft": false,
+      "tags": "Conference,Microservices",
+      "dir": "src/articles",
+      "base": "2021-01-26.json",
+      "ext": ".json",
+      "sourceBase": "2021-01-26.md",
+      "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
@@ -71,6 +84,7 @@
     "src/markdown/2019-09-23.md",
     "src/markdown/2019-10-13.md",
     "src/markdown/2021-01-08.md",
-    "src/markdown/2021-01-18.md"
+    "src/markdown/2021-01-18.md",
+    "src/markdown/2021-01-26.md"
   ]
 }
