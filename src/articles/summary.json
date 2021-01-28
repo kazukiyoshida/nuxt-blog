@@ -70,12 +70,25 @@
       "title": "Rust のアクターモデルで依存性逆転",
       "created_at": "2021-01-26T00:00:00.000Z",
       "updated_at": "2021-01-26T00:00:00.000Z",
-      "draft": true,
-      "tags": "Conference,Microservices",
+      "draft": false,
+      "tags": "Rust,Actix,Actor Model,Dependency Inversion",
       "dir": "src/articles",
       "base": "2021-01-26.json",
       "ext": ".json",
       "sourceBase": "2021-01-26.md",
+      "sourceExt": ".md"
+    },
+    "src/articles/2021-01-28.json": {
+      "id": 9,
+      "title": "「モノリスからマイクロサービスへ」が勉強になった",
+      "created_at": "2021-01-28T00:00:00.000Z",
+      "updated_at": "2021-01-28T00:00:00.000Z",
+      "draft": true,
+      "tags": "Microservices,Record of Reading",
+      "dir": "src/articles",
+      "base": "2021-01-28.json",
+      "ext": ".json",
+      "sourceBase": "2021-01-28.md",
       "sourceExt": ".md"
     }
   },
@@ -85,6 +98,7 @@
     "src/markdown/2019-10-13.md",
     "src/markdown/2021-01-08.md",
     "src/markdown/2021-01-18.md",
-    "src/markdown/2021-01-26.md"
+    "src/markdown/2021-01-26.md",
+    "src/markdown/2021-01-28.md"
   ]
 }
