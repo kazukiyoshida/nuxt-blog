@@ -8,6 +8,7 @@ export interface IPosts {
 export interface IPostSummary {
   id: number
   title: string
+  isDraft: boolean
   createdAt: string
   updatedAt: string
   tags: string[]

@@ -31,7 +31,8 @@ import { fileMap } from '@/articles/summary.json'
 export default class BlogList extends Vue {
   /** Store データの Getter */
   public get posts(): IPostSummary[] {
-    return this.$store.getters['post/getPosts'].slice().reverse()
+    let posts = _.filter(this.$store.getters['post/getPosts'], i => !i.isDraft)
+    return posts.slice().reverse()
   }
 
   /** 2019-09-23T00:00:00.000Z 形式の日付文字列を 2019/09/23 に変換する */
@@ -51,6 +52,7 @@ export default class BlogList extends Vue {
         const ps: IPostSummary = {
           id: file.id,
           title: file.title,
+          isDraft: file.draft,
           createdAt: file.created_at,
           updatedAt: file.updated_at,
           tags: file.tags.split(','),
