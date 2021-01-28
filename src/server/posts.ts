@@ -11,6 +11,7 @@ router.get('/posts', (req, res, next) => {
     const ps: IPostSummary = {
       id: file.id,
       title: file.title,
+      isDraft: file.draft,
       createdAt: file.created_at,
       updatedAt: file.updated_at,
       tags: file.tags.split(','),
