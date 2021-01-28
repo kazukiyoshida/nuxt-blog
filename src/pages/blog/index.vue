@@ -81,7 +81,7 @@ export default class BlogList extends Vue {
 
 .wrapAllBlogs {
   height: 100vh;
-  padding: 70px 0 0 0;
+  padding: 70px 0 120px 0;
   overflow: auto;
 }
 
