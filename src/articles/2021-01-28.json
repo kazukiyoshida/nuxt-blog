@@ -1,0 +1,17 @@
+{
+  "id": 9,
+  "title": "「モノリスからマイクロサービスへ」が勉強になった",
+  "created_at": "2021-01-28T00:00:00.000Z",
+  "updated_at": "2021-01-28T00:00:00.000Z",
+  "draft": false,
+  "tags": "Microservices",
+  "bodyContent": "",
+  "bodyHtml": [
+    "まとめます"
+  ],
+  "dir": "src/articles",
+  "base": "2021-01-28.json",
+  "ext": ".json",
+  "sourceBase": "2021-01-28.md",
+  "sourceExt": ".md"
+}
