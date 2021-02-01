@@ -6,18 +6,20 @@ import pprint
 import glob
 
 def main():
-    files = glob.glob("../src/articles/*")
+    files = glob.glob("src/articles/*")
     for file in files:
         f = file.split('/')[-1]
         if f != "summary.json":
-            print(len(f), f)
+            print(f)
+            update_json_file(f.split('.')[0])
+
 
 
 # timestamp = "2018-10-09"
 def update_json_file(timestamp):
     # HTML 取得
     r = requests.get('https://github.com/kazukiyoshida/nuxt-blog/blob/master/src/markdown/' + timestamp + ".md")
-    soup = BeautifulSoup(r.text, 'html')
+    soup = BeautifulSoup(r.text, 'html.parser')
     html = str(soup.find(id="readme"))
 
     # HTML -> JSON
@@ -25,12 +27,10 @@ def update_json_file(timestamp):
     for line in html.splitlines():
         s = line.replace('\\', '\\\\"') # バックスラッシュをエスケープ
         s = s.replace('\t', '  ')       # タブ文字をスペースに変換
-        s = s.replace('\"', '\\\"')     # 文字 " をエスケープ
-        s = s.replace('\n', '')         # 文末の改行を一旦削除
         json_list.append(s)
 
     # JSON ファイルを更新
-    file_path = "../src/articles/" + timestamp + ".json"
+    file_path = "src/articles/" + timestamp + ".json"
 
     with open(file_path, 'r') as f:
         df = json.load(f)
