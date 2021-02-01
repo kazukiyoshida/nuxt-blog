@@ -1,104 +1,67 @@
 {
   "fileMap": {
     "src/articles/2018-10-09.json": {
-      "id": 7,
+      "id": "mercari-tech-conf",
       "title": "Mercari Tech Conf 2018 レポート",
       "created_at": "2018-10-09T00:00:00.000Z",
       "updated_at": "2018-10-09T00:00:00.000Z",
       "draft": false,
       "tags": "Conference,Microservices",
-      "dir": "src/articles",
-      "base": "2018-10-09.json",
-      "ext": ".json",
-      "sourceBase": "2018-10-09.md",
-      "sourceExt": ".md"
+      "base": "2018-10-09.json"
     },
     "src/articles/2019-09-23.json": {
-      "id": 3,
+      "id": "blog-release",
       "title": "ブログが完成したので公開します",
       "created_at": "2019-09-23T00:00:00.000Z",
       "updated_at": "2019-09-23T00:00:00.000Z",
       "draft": false,
       "tags": "update",
-      "dir": "src/articles",
-      "base": "2019-09-23.json",
-      "ext": ".json",
-      "sourceBase": "2019-09-23.md",
-      "sourceExt": ".md"
+      "base": "2019-09-23.json"
     },
     "src/articles/2019-10-13.json": {
-      "id": 4,
+      "id": "nuxt-blog",
       "title": "Nuxt + Express で Markdown ベースのブログを開発しました",
       "created_at": "2019-10-13T00:00:00.000Z",
       "updated_at": "2019-10-13T00:00:00.000Z",
       "draft": false,
       "tags": "Nuxt.js,Vue.js,Microservices,TypeScript",
-      "dir": "src/articles",
-      "base": "2019-10-13.json",
-      "ext": ".json",
-      "sourceBase": "2019-10-13.md",
-      "sourceExt": ".md"
+      "base": "2019-10-13.json"
     },
     "src/articles/2021-01-08.json": {
-      "id": 5,
+      "id": "Why-I-like-Rust",
       "title": "なぜRustが好きなのか",
       "created_at": "2021-01-08T00:00:00.000Z",
       "updated_at": "2021-01-08T00:00:00.000Z",
       "draft": false,
       "tags": "Rust",
-      "dir": "src/articles",
-      "base": "2021-01-08.json",
-      "ext": ".json",
-      "sourceBase": "2021-01-08.md",
-      "sourceExt": ".md"
+      "base": "2021-01-08.json"
     },
     "src/articles/2021-01-18.json": {
-      "id": 6,
+      "id": "AVR-emulator",
       "title": "AVR ATmega328p のエミュレータを Rust で実装する",
       "created_at": "2021-01-18T00:00:00.000Z",
       "updated_at": "2021-01-18T00:00:00.000Z",
       "draft": false,
       "tags": "Rust,AVR,CPU Emulator",
-      "dir": "src/articles",
-      "base": "2021-01-18.json",
-      "ext": ".json",
-      "sourceBase": "2021-01-18.md",
-      "sourceExt": ".md"
+      "base": "2021-01-18.json"
     },
     "src/articles/2021-01-26.json": {
-      "id": 8,
+      "id": "actor-model-DI",
       "title": "Rust のアクターモデルで依存性逆転",
       "created_at": "2021-01-26T00:00:00.000Z",
       "updated_at": "2021-01-26T00:00:00.000Z",
       "draft": false,
       "tags": "Rust,Actix,Actor Model,Dependency Inversion",
-      "dir": "src/articles",
-      "base": "2021-01-26.json",
-      "ext": ".json",
-      "sourceBase": "2021-01-26.md",
-      "sourceExt": ".md"
+      "base": "2021-01-26.json"
     },
     "src/articles/2021-01-28.json": {
-      "id": 9,
+      "id": "monolith-to-microservices",
       "title": "「モノリスからマイクロサービスへ」が勉強になった",
       "created_at": "2021-01-28T00:00:00.000Z",
       "updated_at": "2021-01-28T00:00:00.000Z",
       "draft": true,
       "tags": "Microservices,Record of Reading",
-      "dir": "src/articles",
-      "base": "2021-01-28.json",
-      "ext": ".json",
-      "sourceBase": "2021-01-28.md",
-      "sourceExt": ".md"
+      "base": "2021-01-28.json"
     }
-  },
-  "sourceFileArray": [
-    "src/markdown/2018-10-09.md",
-    "src/markdown/2019-09-23.md",
-    "src/markdown/2019-10-13.md",
-    "src/markdown/2021-01-08.md",
-    "src/markdown/2021-01-18.md",
-    "src/markdown/2021-01-26.md",
-    "src/markdown/2021-01-28.md"
-  ]
+  }
 }

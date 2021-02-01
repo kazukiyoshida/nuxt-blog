@@ -7,7 +7,10 @@
   "tags": "Microservices",
   "bodyContent": "",
   "bodyHtml": [
-    "まとめます"
+    "<div class=\"Box-body readme blob js-code-block-container p-5 p-xl-6 gist-border-0\" id=\"readme\">",
+    "<article class=\"markdown-body entry-content container-lg\" itemprop=\"text\"><p>マイクロサービスの本を読んだのでまとめます</p>",
+    "</article>",
+    "</div>"
   ],
   "dir": "src/articles",
   "base": "2021-01-28.json",
