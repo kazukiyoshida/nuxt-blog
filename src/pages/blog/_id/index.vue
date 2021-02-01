@@ -35,7 +35,7 @@ import { fileMap } from '@/articles/summary.json'
 export default class Blog extends Vue {
   /** Store データの Getter */
   public get post(): IPost | undefined {
-    return this.$store.getters['post/getPost'](Number(this.$route.params.id))
+    return this.$store.getters['post/getPost'](this.$route.params.id)
   }
 
   public date(t: string): string {
@@ -46,7 +46,7 @@ export default class Blog extends Vue {
   public async fetch({ store, route, error }) {
     store.commit('i18n/setBackgroundColor', COLOR.WHITE)
 
-    const article = _.find(fileMap, ['id', Number(route.params.id)])
+    const article = _.find(fileMap, ['id', route.params.id])
     if (!article) {
       error({
         message: ERROR.NO_POST

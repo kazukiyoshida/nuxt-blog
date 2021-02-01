@@ -6,7 +6,7 @@ export interface IPosts {
 }
 
 export interface IPostSummary {
-  id: number
+  id: string
   title: string
   isDraft: boolean
   createdAt: string
