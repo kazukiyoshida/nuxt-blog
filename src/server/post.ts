@@ -23,7 +23,6 @@ router.get('/posts/:id', (req, res, next) => {
     updatedAt: p.updated_at,
     tags: p.tags.split(','),
     topImageUrl: p.top_image,
-    bodyContent: p.bodyContent,
     bodyHtml: p.bodyHtml,
   }
 

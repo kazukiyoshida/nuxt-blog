@@ -8,7 +8,6 @@ export interface IPost {
   updatedAt: string
   tags: string[]
   topImageUrl: string
-  bodyContent: string
   bodyHtml: string
 }
 
