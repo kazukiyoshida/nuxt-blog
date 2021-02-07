@@ -1,3 +1,13 @@
+<p align="center"><b>
+職務経歴書
+</b></p>
+
+<p align="right">
+2021年2月7日現在<br>
+吉田 和輝
+</p>
+
+
 ## 概要
 
 修士の2年間は機械学習を学び、Webシステム開発の現場ではサーバーサイド・フロントエンド合わせて3年の経験があります。  
@@ -48,7 +58,7 @@
 【規模】全体で 60〜70 名、サーバーサイドエンジニアが 30〜20 名.
 
 【主な技術セット】
-- 言語・FW：Kotlin（1.3.50）、SpringBoot（2.2.1）、MySQL（5.7.12）、Vue.js（v2）、OpenAPI
+- 言語・FW：Kotlin（1.3.50）、JDK（11）、SpringBoot（2.2.1）、MySQL（5.7）、Vue.js（2.6）、OpenAPI（3.0）
 - インフラ・CI/CD：GitHub Actions、AWS ECS・ECR・Aurora・Elasticsearch
 
 【取り組んだ内容】
@@ -69,7 +79,7 @@
 
 【規模】全6名
 
-【主な技術セット】Kotlin（1.3.50）、SpringBoot（2.2.1）、MySQL（5.7.12）、Vue.js（v2）
+【主な技術セット】Kotlin（1.3.50）、SpringBoot（2.2.1）、MySQL（5.7）、Vue.js（2.6）
 
 【取り組んだ内容】
 - 言語として Go を検討しましたが、社内スキルセットの観点から Kotlin を選択しました。
@@ -85,7 +95,7 @@
 
 【URL】https://baito.mynavi.jp
 
-【主な技術セット】TypeScript（）、Nuxt.js（）、Vue.js（）
+【主な技術セット】TypeScript（3.6）、Nuxt.js（2.10）、Vue.js（2.6）
 
 【取り組んだ内容】
 - メインとなる検索一覧の画面の実装を担当しました。コンポーネントの責務や純粋性を追求したり、
@@ -102,7 +112,7 @@
 
 【規模】全体でおよそ8名
 
-【主な技術セット】Go（）、Gin（）、MySQL（）
+【主な技術セット】Go（1.11）、Gin（1.3）、MySQL（5.7）
 
 【取り組んだ内容】
 - 入社直後はチケットシステムの前身となるサービスを Ruby on Rails での開発に携わりました。
@@ -135,7 +145,7 @@
 
 ### ■ 京都大学大学院 非線形動力学研究室 篠本研
 ### 画像処理ニューラルネットワークと霊長類の視覚野の類似性について
-【主な技術セット】Python（）、TensorFlow（）
+【主な技術セット】Python（2.7、3.5）、TensorFlow（0.8）、CUDA（7.5）、cuDNN（4.0）、Theano（0.8）、GPU（NVIDIA GeForce Titan）
 
 【研究内容】
 - 畳み込みニューラルネットワークの低次層が網膜のニューロンのスパイク活動と似た振る舞いを示すのですが、
@@ -169,6 +179,5 @@
 
 ### ブログ・SNS・インタビュー
 - 個人サイト: https://kazukiyoshida.net/
-- Twitter: https://twitter.com/_kazukiyoshida_
+- Twitter: https://twitter.com/_kazukiyoshida_/
 - GitHub: https://github.com/kazukiyoshida
-- インタビュー記事: https://tsunen.team-lab.com/interview/yosidaKazuki/interview.html
