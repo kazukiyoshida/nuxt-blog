@@ -27,6 +27,15 @@
       "tags": "Conference,Microservices",
       "base": "2018-10-09.json"
     },
+    "src/articles/2019-07-31.json": {
+      "id": "closure",
+      "title": "クロージャを使った問題解決",
+      "created_at": "2019-07-31T00:00:00.000Z",
+      "updated_at": "2019-07-31T00:00:00.000Z",
+      "draft": false,
+      "tags": "TypeScript,Vue.js",
+      "base": "2019-07-31.json"
+    },
     "src/articles/2019-09-23.json": {
       "id": "blog-release",
       "title": "ブログが完成したので公開します",
