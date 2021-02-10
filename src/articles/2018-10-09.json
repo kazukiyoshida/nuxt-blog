@@ -7,7 +7,8 @@
   "tags": "update",
   "bodyHtml": [
     "<div class=\"Box-body readme blob js-code-block-container p-5 p-xl-6 gist-border-0\" id=\"readme\">",
-    "<article class=\"markdown-body entry-content container-lg\" itemprop=\"text\"><p>10月4日（木）に六本木で行われた <a href=\"https://techconf.mercari.com/2018\" rel=\"nofollow\">Mercari Tech Conf 2018</a>",
+    "<article class=\"markdown-body entry-content container-lg\" itemprop=\"text\"><p>※ 本記事は はてなブログ に2018年10月9日に投稿した記事を移植したものです。</p>",
+    "<p>10月4日（木）に六本木で行われた <a href=\"https://techconf.mercari.com/2018\" rel=\"nofollow\">Mercari Tech Conf 2018</a>",
     "に参加してきました。 Mercari が取り組んでいるエンジニアリングの裏側について1日かけて学んだことをまとめます。</p>",
     "<h2><a aria-hidden=\"true\" class=\"anchor\" href=\"#全体を通しての感想\" id=\"user-content-全体を通しての感想\"><svg aria-hidden=\"true\" class=\"octicon octicon-link\" height=\"16\" version=\"1.1\" viewbox=\"0 0 16 16\" width=\"16\"><path d=\"M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z\" fill-rule=\"evenodd\"></path></svg></a>全体を通しての感想</h2>",
     "<p>カンファレンスの内容としては、Microservices と Machine Learning の2つの話題が中心となっており、",
