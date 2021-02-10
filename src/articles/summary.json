@@ -9,6 +9,15 @@
       "tags": "TensorFlow,GPU",
       "base": "2016-06-19.json"
     },
+    "src/articles/2016-06-27.json": {
+      "id": "tensorflow-data",
+      "title": "TensorFlowによるデータの読み込み",
+      "created_at": "2016-06-27T00:00:00.000Z",
+      "updated_at": "2016-06-27T00:00:00.000Z",
+      "draft": false,
+      "tags": "TensorFlow",
+      "base": "2016-06-27.json"
+    },
     "src/articles/2018-10-09.json": {
       "id": "mercari-tech-conf",
       "title": "Mercari Tech Conf 2018 レポート",
