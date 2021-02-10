@@ -1,0 +1,16 @@
+{
+  "id": "tensorflow-data",
+  "title": "TensorFlowによるデータの読み込み",
+  "created_at": "2016-06-27T00:00:00.000Z",
+  "updated_at": "2016-06-27T00:00:00.000Z",
+  "draft": false,
+  "tags": "TensorFlow",
+  "bodyContent": "",
+  "bodyHtml": [
+  ],
+  "dir": "src/articles",
+  "base": "2016-06-27.json",
+  "ext": ".json",
+  "sourceBase": "2016-06-27.md",
+  "sourceExt": ".md"
+}
