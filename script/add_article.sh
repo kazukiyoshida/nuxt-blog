@@ -19,7 +19,7 @@ read TITLE
 touch src/markdown/$FILENAME.md
 cat <<EOF >> src/articles/$FILENAME.json
 {
-  "id": "$FILENAME",
+  "id": "$POSTID",
   "title": "$TITLE",
   "created_at": "${TIMESTAMP}T00:00:00.000Z",
   "updated_at": "${TIMESTAMP}T00:00:00.000Z",
