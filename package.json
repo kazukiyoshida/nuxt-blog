@@ -37,7 +37,7 @@
     "nuxt-property-decorator": "^2.3.0",
     "pino": "^5.13.1",
     "processmd": "^4.4.2",
-    "pug": "2.0.3",
+    "pug": "3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "ts-node": "^8.3.0",
